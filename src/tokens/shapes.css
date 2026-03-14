@@ -1,0 +1,20 @@
+/* ------------------------------------------------------------------
+   Laurel Design — Shape Tokens (radii, shadows)
+   ------------------------------------------------------------------ */
+
+:root {
+  /* Border radii */
+  --laurel-radius-none: 0;
+  --laurel-radius-sm: 0.25rem;    /* 4px */
+  --laurel-radius-md: 0.375rem;   /* 6px */
+  --laurel-radius-lg: 0.5rem;     /* 8px */
+  --laurel-radius-xl: 0.75rem;    /* 12px */
+  --laurel-radius-2xl: 1rem;      /* 16px */
+  --laurel-radius-full: 9999px;
+
+  /* Shadows */
+  --laurel-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --laurel-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --laurel-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --laurel-shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}

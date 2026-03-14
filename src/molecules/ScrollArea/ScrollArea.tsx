@@ -1,0 +1,29 @@
+import { forwardRef } from 'react';
+import type { ScrollAreaProps } from './ScrollArea.types';
+
+const ScrollArea = forwardRef<HTMLDivElement, ScrollAreaProps>(
+  ({ maxHeight, className = '', children, style, ...rest }, ref) => (
+    <div
+      ref={ref}
+      className={[
+        'overflow-auto',
+        '[&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar]:h-2',
+        '[&::-webkit-scrollbar-track]:bg-transparent',
+        '[&::-webkit-scrollbar-thumb]:bg-[var(--laurel-bg-control)] [&::-webkit-scrollbar-thumb]:rounded-full',
+        '[&::-webkit-scrollbar-thumb]:hover:bg-[var(--laurel-bg-control-hover)]',
+        className,
+      ].filter(Boolean).join(' ')}
+      style={{
+        maxHeight: typeof maxHeight === 'number' ? `${maxHeight}px` : maxHeight,
+        ...style,
+      }}
+      {...rest}
+    >
+      {children}
+    </div>
+  ),
+);
+
+ScrollArea.displayName = 'ScrollArea';
+
+export { ScrollArea };

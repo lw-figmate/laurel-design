@@ -1,0 +1,26 @@
+@import "tailwindcss";
+@import "./tokens/index.css";
+
+:root {
+  font-family: var(--laurel-font-sans);
+  font-size: var(--laurel-font-size-base);
+  line-height: var(--laurel-line-height-normal);
+  color-scheme: light dark;
+  color: var(--laurel-text-primary);
+  background: var(--laurel-bg-surface);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+

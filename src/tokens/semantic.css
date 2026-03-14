@@ -1,0 +1,197 @@
+/* ------------------------------------------------------------------
+   Laurel Design — Semantic Tokens
+
+   Maps UI roles to the primitive color palette. Light values are
+   defined under :root; dark values under [data-theme="dark"].
+
+   Naming is designed for 1:1 mapping to a Figma "Semantic" variable
+   collection with Light / Dark modes.
+   ------------------------------------------------------------------ */
+
+:root {
+  /* ── Background ───────────────────────────────────────────────── */
+  --laurel-bg-surface: var(--laurel-color-neutral-0);
+  --laurel-bg-muted: var(--laurel-color-neutral-50);
+  --laurel-bg-subtle: var(--laurel-color-neutral-100);
+  --laurel-bg-accent: var(--laurel-color-neutral-200);
+  --laurel-bg-elevated: var(--laurel-color-neutral-900);
+  --laurel-bg-overlay: rgb(0 0 0 / 0.5);
+  --laurel-bg-hover: var(--laurel-color-neutral-100);
+  --laurel-bg-hover-overlay: rgb(0 0 0 / 0.08);
+  --laurel-bg-hover-on-elevated: rgb(255 255 255 / 0.1);
+  --laurel-bg-hover-on-elevated-strong: rgb(255 255 255 / 0.2);
+
+  --laurel-bg-brand: var(--laurel-color-primary-600);
+  --laurel-bg-brand-hover: var(--laurel-color-primary-700);
+  --laurel-bg-brand-muted: var(--laurel-color-primary-50);
+  --laurel-bg-brand-subtle: var(--laurel-color-primary-100);
+  --laurel-bg-danger: var(--laurel-color-error-600);
+  --laurel-bg-danger-hover: var(--laurel-color-error-500);
+  --laurel-bg-success: var(--laurel-color-success-600);
+  --laurel-bg-warning: var(--laurel-color-warning-500);
+  --laurel-bg-control: var(--laurel-color-neutral-300);
+  --laurel-bg-control-hover: var(--laurel-color-neutral-400);
+
+  /* ── Text ─────────────────────────────────────────────────────── */
+  --laurel-text-primary: var(--laurel-color-neutral-800);
+  --laurel-text-secondary: var(--laurel-color-neutral-700);
+  --laurel-text-tertiary: var(--laurel-color-neutral-600);
+  --laurel-text-muted: var(--laurel-color-neutral-500);
+  --laurel-text-placeholder: var(--laurel-color-neutral-400);
+  --laurel-text-disabled: var(--laurel-color-neutral-400);
+  --laurel-text-heading: var(--laurel-color-neutral-900);
+  --laurel-text-on-brand: var(--laurel-color-neutral-0);
+  --laurel-text-on-elevated: var(--laurel-color-neutral-0);
+  --laurel-text-link: var(--laurel-color-primary-600);
+  --laurel-text-brand: var(--laurel-color-primary-600);
+  --laurel-text-brand-strong: var(--laurel-color-primary-800);
+  --laurel-text-brand-on-dark: var(--laurel-color-primary-200);
+  --laurel-text-error: var(--laurel-color-error-600);
+  --laurel-text-error-strong: var(--laurel-color-error-700);
+  --laurel-text-error-muted: var(--laurel-color-error-400);
+  --laurel-text-success: var(--laurel-color-success-600);
+  --laurel-text-warning: var(--laurel-color-warning-600);
+
+  /* ── Border ───────────────────────────────────────────────────── */
+  --laurel-border-default: var(--laurel-color-neutral-300);
+  --laurel-border-subtle: var(--laurel-color-neutral-200);
+  --laurel-border-muted: var(--laurel-color-neutral-100);
+  --laurel-border-strong: var(--laurel-color-neutral-400);
+  --laurel-border-brand: var(--laurel-color-primary-600);
+  --laurel-border-brand-accent: var(--laurel-color-primary-400);
+  --laurel-border-brand-muted: var(--laurel-color-primary-200);
+  --laurel-border-error: var(--laurel-color-error-500);
+  --laurel-border-error-muted: var(--laurel-color-error-200);
+
+  /* ── Ring ──────────────────────────────────────────────────────── */
+  --laurel-ring-brand: var(--laurel-color-primary-400);
+  --laurel-ring-brand-strong: var(--laurel-color-primary-500);
+  --laurel-ring-brand-subtle: var(--laurel-color-primary-300);
+  --laurel-ring-neutral: var(--laurel-color-neutral-400);
+  --laurel-ring-error: var(--laurel-color-error-500);
+  --laurel-ring-on-surface: var(--laurel-color-neutral-0);
+
+  /* ── Icon ──────────────────────────────────────────────────────── */
+  --laurel-icon-muted: var(--laurel-color-neutral-500);
+  --laurel-icon-brand: var(--laurel-color-primary-500);
+  --laurel-icon-brand-muted: var(--laurel-color-primary-300);
+  --laurel-icon-success: var(--laurel-color-success-500);
+  --laurel-icon-warning: var(--laurel-color-warning-400);
+  --laurel-icon-error: var(--laurel-color-error-500);
+
+  /* ── Status (Alert / Badge / Tag) ─────────────────────────────── */
+  --laurel-status-info-bg: var(--laurel-color-primary-50);
+  --laurel-status-info-border: var(--laurel-color-primary-200);
+  --laurel-status-info-text: var(--laurel-color-primary-800);
+  --laurel-status-info-icon: var(--laurel-color-primary-500);
+
+  --laurel-status-success-bg: var(--laurel-color-success-100);
+  --laurel-status-success-border: var(--laurel-color-success-300);
+  --laurel-status-success-text: var(--laurel-color-success-600);
+  --laurel-status-success-icon: var(--laurel-color-success-500);
+
+  --laurel-status-warning-bg: var(--laurel-color-warning-100);
+  --laurel-status-warning-border: var(--laurel-color-warning-300);
+  --laurel-status-warning-text: var(--laurel-color-warning-600);
+  --laurel-status-warning-icon: var(--laurel-color-warning-500);
+
+  --laurel-status-error-bg: var(--laurel-color-error-100);
+  --laurel-status-error-border: var(--laurel-color-error-300);
+  --laurel-status-error-text: var(--laurel-color-error-600);
+  --laurel-status-error-icon: var(--laurel-color-error-500);
+}
+
+/* ── Dark theme ─────────────────────────────────────────────────── */
+
+[data-theme="dark"] {
+  /* ── Background ───────────────────────────────────────────────── */
+  --laurel-bg-surface: var(--laurel-color-neutral-950);
+  --laurel-bg-muted: var(--laurel-color-neutral-900);
+  --laurel-bg-subtle: var(--laurel-color-neutral-800);
+  --laurel-bg-accent: var(--laurel-color-neutral-700);
+  --laurel-bg-elevated: var(--laurel-color-neutral-800);
+  --laurel-bg-overlay: rgb(0 0 0 / 0.7);
+  --laurel-bg-hover: var(--laurel-color-neutral-800);
+  --laurel-bg-hover-overlay: rgb(255 255 255 / 0.08);
+  --laurel-bg-hover-on-elevated: rgb(255 255 255 / 0.1);
+  --laurel-bg-hover-on-elevated-strong: rgb(255 255 255 / 0.15);
+
+  --laurel-bg-brand: var(--laurel-color-primary-500);
+  --laurel-bg-brand-hover: var(--laurel-color-primary-400);
+  --laurel-bg-brand-muted: var(--laurel-color-primary-950);
+  --laurel-bg-brand-subtle: var(--laurel-color-primary-900);
+  --laurel-bg-danger: var(--laurel-color-error-600);
+  --laurel-bg-danger-hover: var(--laurel-color-error-500);
+  --laurel-bg-success: var(--laurel-color-success-600);
+  --laurel-bg-warning: var(--laurel-color-warning-600);
+  --laurel-bg-control: var(--laurel-color-neutral-600);
+  --laurel-bg-control-hover: var(--laurel-color-neutral-500);
+
+  /* ── Text ─────────────────────────────────────────────────────── */
+  --laurel-text-primary: var(--laurel-color-neutral-100);
+  --laurel-text-secondary: var(--laurel-color-neutral-300);
+  --laurel-text-tertiary: var(--laurel-color-neutral-400);
+  --laurel-text-muted: var(--laurel-color-neutral-400);
+  --laurel-text-placeholder: var(--laurel-color-neutral-500);
+  --laurel-text-disabled: var(--laurel-color-neutral-600);
+  --laurel-text-heading: var(--laurel-color-neutral-50);
+  --laurel-text-on-brand: var(--laurel-color-neutral-0);
+  --laurel-text-on-elevated: var(--laurel-color-neutral-100);
+  --laurel-text-link: var(--laurel-color-primary-400);
+  --laurel-text-brand: var(--laurel-color-primary-400);
+  --laurel-text-brand-strong: var(--laurel-color-primary-200);
+  --laurel-text-brand-on-dark: var(--laurel-color-primary-400);
+  --laurel-text-error: var(--laurel-color-error-400);
+  --laurel-text-error-strong: var(--laurel-color-error-300);
+  --laurel-text-error-muted: var(--laurel-color-error-300);
+  --laurel-text-success: var(--laurel-color-success-400);
+  --laurel-text-warning: var(--laurel-color-warning-400);
+
+  /* ── Border ───────────────────────────────────────────────────── */
+  --laurel-border-default: var(--laurel-color-neutral-600);
+  --laurel-border-subtle: var(--laurel-color-neutral-700);
+  --laurel-border-muted: var(--laurel-color-neutral-800);
+  --laurel-border-strong: var(--laurel-color-neutral-500);
+  --laurel-border-brand: var(--laurel-color-primary-400);
+  --laurel-border-brand-accent: var(--laurel-color-primary-500);
+  --laurel-border-brand-muted: var(--laurel-color-primary-700);
+  --laurel-border-error: var(--laurel-color-error-400);
+  --laurel-border-error-muted: var(--laurel-color-error-800);
+
+  /* ── Ring ──────────────────────────────────────────────────────── */
+  --laurel-ring-brand: var(--laurel-color-primary-500);
+  --laurel-ring-brand-strong: var(--laurel-color-primary-400);
+  --laurel-ring-brand-subtle: var(--laurel-color-primary-500);
+  --laurel-ring-neutral: var(--laurel-color-neutral-500);
+  --laurel-ring-error: var(--laurel-color-error-400);
+  --laurel-ring-on-surface: var(--laurel-color-neutral-950);
+
+  /* ── Icon ──────────────────────────────────────────────────────── */
+  --laurel-icon-muted: var(--laurel-color-neutral-400);
+  --laurel-icon-brand: var(--laurel-color-primary-400);
+  --laurel-icon-brand-muted: var(--laurel-color-primary-400);
+  --laurel-icon-success: var(--laurel-color-success-400);
+  --laurel-icon-warning: var(--laurel-color-warning-300);
+  --laurel-icon-error: var(--laurel-color-error-400);
+
+  /* ── Status (Alert / Badge / Tag) ─────────────────────────────── */
+  --laurel-status-info-bg: var(--laurel-color-primary-950);
+  --laurel-status-info-border: var(--laurel-color-primary-700);
+  --laurel-status-info-text: var(--laurel-color-primary-200);
+  --laurel-status-info-icon: var(--laurel-color-primary-400);
+
+  --laurel-status-success-bg: var(--laurel-color-success-900);
+  --laurel-status-success-border: var(--laurel-color-success-700);
+  --laurel-status-success-text: var(--laurel-color-success-400);
+  --laurel-status-success-icon: var(--laurel-color-success-400);
+
+  --laurel-status-warning-bg: var(--laurel-color-warning-900);
+  --laurel-status-warning-border: var(--laurel-color-warning-700);
+  --laurel-status-warning-text: var(--laurel-color-warning-400);
+  --laurel-status-warning-icon: var(--laurel-color-warning-400);
+
+  --laurel-status-error-bg: var(--laurel-color-error-900);
+  --laurel-status-error-border: var(--laurel-color-error-700);
+  --laurel-status-error-text: var(--laurel-color-error-400);
+  --laurel-status-error-icon: var(--laurel-color-error-400);
+}

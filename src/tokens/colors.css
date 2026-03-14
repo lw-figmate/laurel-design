@@ -1,0 +1,75 @@
+/* ------------------------------------------------------------------
+   Laurel Design — Color Tokens (Primitives)
+
+   Raw palette values. These serve as the foundation for the semantic
+   token layer in semantic.css and map 1:1 to a Figma "Primitives"
+   variable collection.
+   ------------------------------------------------------------------ */
+
+:root {
+  /* Primary */
+  --laurel-color-primary-50: #f5f0ff;
+  --laurel-color-primary-100: #ede5ff;
+  --laurel-color-primary-200: #dccfff;
+  --laurel-color-primary-300: #c3a8ff;
+  --laurel-color-primary-400: #a876ff;
+  --laurel-color-primary-500: #8f44ff;
+  --laurel-color-primary-600: #7b22f7;
+  --laurel-color-primary-700: #6b14e3;
+  --laurel-color-primary-800: #5a11bf;
+  --laurel-color-primary-900: #4a0f9c;
+  --laurel-color-primary-950: #2e0760;
+
+  /* Neutral */
+  --laurel-color-neutral-0: #ffffff;
+  --laurel-color-neutral-50: #f9fafb;
+  --laurel-color-neutral-100: #f3f4f6;
+  --laurel-color-neutral-200: #e5e7eb;
+  --laurel-color-neutral-300: #d1d5db;
+  --laurel-color-neutral-400: #9ca3af;
+  --laurel-color-neutral-500: #6b7280;
+  --laurel-color-neutral-600: #4b5563;
+  --laurel-color-neutral-700: #374151;
+  --laurel-color-neutral-800: #1f2937;
+  --laurel-color-neutral-900: #111827;
+  --laurel-color-neutral-950: #030712;
+
+  /* Success */
+  --laurel-color-success-50: #f0fdf4;
+  --laurel-color-success-100: #dcfce7;
+  --laurel-color-success-200: #bbf7d0;
+  --laurel-color-success-300: #86efac;
+  --laurel-color-success-400: #4ade80;
+  --laurel-color-success-500: #22c55e;
+  --laurel-color-success-600: #16a34a;
+  --laurel-color-success-700: #15803d;
+  --laurel-color-success-800: #166534;
+  --laurel-color-success-900: #14532d;
+  --laurel-color-success-950: #052e16;
+
+  /* Warning */
+  --laurel-color-warning-50: #fffbeb;
+  --laurel-color-warning-100: #fef3c7;
+  --laurel-color-warning-200: #fde68a;
+  --laurel-color-warning-300: #fcd34d;
+  --laurel-color-warning-400: #fbbf24;
+  --laurel-color-warning-500: #f59e0b;
+  --laurel-color-warning-600: #d97706;
+  --laurel-color-warning-700: #b45309;
+  --laurel-color-warning-800: #92400e;
+  --laurel-color-warning-900: #78350f;
+  --laurel-color-warning-950: #451a03;
+
+  /* Error */
+  --laurel-color-error-50: #fef2f2;
+  --laurel-color-error-100: #fee2e2;
+  --laurel-color-error-200: #fecaca;
+  --laurel-color-error-300: #fca5a5;
+  --laurel-color-error-400: #f87171;
+  --laurel-color-error-500: #ef4444;
+  --laurel-color-error-600: #dc2626;
+  --laurel-color-error-700: #b91c1c;
+  --laurel-color-error-800: #991b1b;
+  --laurel-color-error-900: #7f1d1d;
+  --laurel-color-error-950: #450a0a;
+}

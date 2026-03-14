@@ -1,0 +1,30 @@
+/* ------------------------------------------------------------------
+   Laurel Design — Typography Tokens
+   ------------------------------------------------------------------ */
+
+:root {
+  /* Font families */
+  --laurel-font-sans: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --laurel-font-mono: ui-monospace, 'Cascadia Code', 'Fira Code', Consolas, monospace;
+
+  /* Font sizes */
+  --laurel-font-size-xs: 0.75rem;    /* 12px */
+  --laurel-font-size-sm: 0.875rem;   /* 14px */
+  --laurel-font-size-base: 1rem;     /* 16px */
+  --laurel-font-size-lg: 1.125rem;   /* 18px */
+  --laurel-font-size-xl: 1.25rem;    /* 20px */
+  --laurel-font-size-2xl: 1.5rem;    /* 24px */
+  --laurel-font-size-3xl: 1.875rem;  /* 30px */
+  --laurel-font-size-4xl: 2.25rem;   /* 36px */
+
+  /* Font weights */
+  --laurel-font-weight-normal: 400;
+  --laurel-font-weight-medium: 500;
+  --laurel-font-weight-semibold: 600;
+  --laurel-font-weight-bold: 700;
+
+  /* Line heights */
+  --laurel-line-height-tight: 1.25;
+  --laurel-line-height-normal: 1.5;
+  --laurel-line-height-relaxed: 1.75;
+}
