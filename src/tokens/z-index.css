@@ -1,0 +1,15 @@
+/* Laurel Design — Z-Index Scale */
+:root {
+  --laurel-z-hide: -1;
+  --laurel-z-base: 0;
+  --laurel-z-docked: 10;
+  --laurel-z-dropdown: 1000;
+  --laurel-z-sticky: 1100;
+  --laurel-z-banner: 1200;
+  --laurel-z-overlay: 1300;
+  --laurel-z-modal: 1400;
+  --laurel-z-popover: 1500;
+  --laurel-z-toast: 1600;
+  --laurel-z-tooltip: 1700;
+  --laurel-z-max: 9999;
+}

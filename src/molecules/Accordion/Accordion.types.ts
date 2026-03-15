@@ -11,7 +11,7 @@ export interface AccordionProps extends Omit<ComponentPropsWithRef<'div'>, 'onCh
   onValueChange?: (value: string[]) => void;
 }
 
-export interface AccordionItemProps extends ComponentPropsWithRef<'div'> {
+export interface AccordionItemProps extends Omit<ComponentPropsWithRef<'div'>, 'title'> {
   /** Unique value identifying this item */
   value: string;
   /** Trigger label */

@@ -1,4 +1,4 @@
-export const BADGE_VARIANTS = ['default', 'primary', 'success', 'warning', 'error'] as const;
+export const BADGE_VARIANTS = ['default', 'neutral', 'primary', 'success', 'warning', 'error'] as const;
 export const BADGE_SIZES = ['sm', 'md', 'lg'] as const;
 
 export type BadgeVariant = (typeof BADGE_VARIANTS)[number];

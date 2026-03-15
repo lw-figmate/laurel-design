@@ -1,5 +1,4 @@
 import { forwardRef, useState, useId } from 'react';
-import { Input } from '../../atoms/Input';
 import { Select } from '../../atoms/Select';
 import { Button } from '../../atoms/Button';
 import { Label } from '../../atoms/Label';

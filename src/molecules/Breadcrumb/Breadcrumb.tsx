@@ -34,7 +34,7 @@ const Breadcrumb = forwardRef<HTMLElement, BreadcrumbProps>(
 Breadcrumb.displayName = 'Breadcrumb';
 
 const BreadcrumbItem = forwardRef<HTMLLIElement, BreadcrumbItemProps>(
-  ({ href, active, children, className = '', ...rest }, ref) => {
+  ({ href, active, children, className = '' }, ref) => {
     if (active || !href) {
       return (
         <span

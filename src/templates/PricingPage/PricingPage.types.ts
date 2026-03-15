@@ -1,5 +1,5 @@
 import type { ComponentPropsWithRef, ReactNode } from 'react';
-import type { PricingTier } from '../../organisms/PricingTable';
+import type { PricingTier, PricingFeature } from '../../organisms/PricingTable';
 
 export interface PricingPageProps extends ComponentPropsWithRef<'div'> {
   /** Page title */
@@ -8,8 +8,8 @@ export interface PricingPageProps extends ComponentPropsWithRef<'div'> {
   subtitle?: string;
   /** Pricing tiers */
   tiers: PricingTier[];
-  /** Feature comparison labels */
-  features?: Array<{ name: string; values: Record<string, boolean | string> }>;
+  /** Feature comparison rows */
+  features?: PricingFeature[];
   /** Toggle between monthly / annual */
   billingToggle?: ReactNode;
   /** FAQ section */

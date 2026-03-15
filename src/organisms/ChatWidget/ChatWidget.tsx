@@ -3,7 +3,6 @@ import { createPortal } from 'react-dom';
 import { Text } from '../../atoms/Text';
 import { Button } from '../../atoms/Button';
 import { Input } from '../../atoms/Input';
-import { Avatar } from '../../atoms/Avatar';
 import { ScrollArea } from '../../molecules/ScrollArea';
 import type { ChatWidgetProps } from './ChatWidget.types';
 

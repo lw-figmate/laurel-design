@@ -1,7 +1,6 @@
 import { forwardRef } from 'react';
 import { Text } from '../../atoms/Text';
 import { Button } from '../../atoms/Button';
-import { Badge } from '../../atoms/Badge';
 import type { PricingTableProps } from './PricingTable.types';
 
 const checkIcon = (
@@ -49,7 +48,7 @@ const PricingTable = forwardRef<HTMLDivElement, PricingTableProps>(
                     </Text>
                   )}
                   <Button
-                    variant={tier.highlighted ? 'default' : 'outline'}
+                    variant={tier.highlighted ? 'primary' : 'outline'}
                     size="sm"
                     onClick={() => onTierSelect?.(tier.id)}
                     className="mt-[var(--laurel-space-2)]"

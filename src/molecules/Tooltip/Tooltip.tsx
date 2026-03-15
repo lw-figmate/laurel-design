@@ -1,4 +1,4 @@
-import { useState, useRef, useCallback, cloneElement } from 'react';
+import { useState, useRef, useCallback, cloneElement, type ReactElement } from 'react';
 import type { TooltipProps } from './Tooltip.types';
 
 const placementClasses: Record<string, string> = {
@@ -10,7 +10,7 @@ const placementClasses: Record<string, string> = {
 
 const Tooltip = ({ content, children, placement = 'top', delay = 200 }: TooltipProps) => {
   const [visible, setVisible] = useState(false);
-  const timeoutRef = useRef<ReturnType<typeof setTimeout>>();
+  const timeoutRef = useRef<ReturnType<typeof setTimeout>>(undefined);
 
   const show = useCallback(() => {
     timeoutRef.current = setTimeout(() => setVisible(true), delay);
@@ -21,22 +21,29 @@ const Tooltip = ({ content, children, placement = 'top', delay = 200 }: TooltipP
     setVisible(false);
   }, []);
 
-  const trigger = cloneElement(children, {
+  const childEl = children as ReactElement<Record<string, unknown>>;
+  const childProps = childEl.props as Record<string, unknown> & {
+    onMouseEnter?: (e: React.MouseEvent) => void;
+    onMouseLeave?: (e: React.MouseEvent) => void;
+    onFocus?: (e: React.FocusEvent) => void;
+    onBlur?: (e: React.FocusEvent) => void;
+  };
+  const trigger = cloneElement(childEl, {
     onMouseEnter: (e: React.MouseEvent) => {
       show();
-      children.props.onMouseEnter?.(e);
+      childProps.onMouseEnter?.(e);
     },
     onMouseLeave: (e: React.MouseEvent) => {
       hide();
-      children.props.onMouseLeave?.(e);
+      childProps.onMouseLeave?.(e);
     },
     onFocus: (e: React.FocusEvent) => {
       show();
-      children.props.onFocus?.(e);
+      childProps.onFocus?.(e);
     },
     onBlur: (e: React.FocusEvent) => {
       hide();
-      children.props.onBlur?.(e);
+      childProps.onBlur?.(e);
     },
     'aria-describedby': visible ? 'laurel-tooltip' : undefined,
   });

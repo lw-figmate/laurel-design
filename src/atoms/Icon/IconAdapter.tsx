@@ -1,4 +1,4 @@
-import { forwardRef } from 'react';
+import { forwardRef, type ElementType } from 'react';
 import type { IconAdapterProps } from './IconAdapter.types';
 
 const sizeMap: Record<string, string> = {
@@ -18,16 +18,19 @@ const sizeMap: Record<string, string> = {
  * <IconAdapter icon={Rocket} size="lg" label="Launch" />
  */
 const IconAdapter = forwardRef<SVGSVGElement, IconAdapterProps>(
-  ({ icon: ExternalIcon, size = 'md', label, className = '', ...rest }, ref) => (
-    <ExternalIcon
-      ref={ref}
-      className={[sizeMap[size], 'shrink-0', className].filter(Boolean).join(' ')}
-      aria-hidden={label ? undefined : true}
-      aria-label={label ?? undefined}
-      role={label ? 'img' : undefined}
-      {...rest}
-    />
-  ),
+  ({ icon, size = 'md', label, className = '', ...rest }, ref) => {
+    const Comp = icon as ElementType;
+    return (
+      <Comp
+        ref={ref}
+        className={[sizeMap[size], 'shrink-0', className].filter(Boolean).join(' ')}
+        aria-hidden={label ? undefined : true}
+        aria-label={label ?? undefined}
+        role={label ? 'img' : undefined}
+        {...rest}
+      />
+    );
+  },
 );
 
 IconAdapter.displayName = 'IconAdapter';

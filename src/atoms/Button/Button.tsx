@@ -6,6 +6,8 @@ const variantClasses: Record<string, string> = {
     'bg-[var(--laurel-bg-brand)] text-[var(--laurel-text-on-brand)] hover:bg-[var(--laurel-bg-brand-hover)] focus-visible:ring-[var(--laurel-ring-brand)]',
   secondary:
     'border border-[var(--laurel-border-default)] bg-[var(--laurel-bg-surface)] text-[var(--laurel-text-primary)] hover:bg-[var(--laurel-bg-subtle)] focus-visible:ring-[var(--laurel-ring-neutral)]',
+  outline:
+    'border border-[var(--laurel-border-default)] bg-transparent text-[var(--laurel-text-primary)] hover:bg-[var(--laurel-bg-subtle)] focus-visible:ring-[var(--laurel-ring-neutral)]',
   ghost:
     'bg-transparent text-[var(--laurel-text-secondary)] hover:bg-[var(--laurel-bg-subtle)] focus-visible:ring-[var(--laurel-ring-neutral)]',
   danger:

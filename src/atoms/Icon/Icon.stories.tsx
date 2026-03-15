@@ -260,7 +260,10 @@ export const Gallery: Story = {
       </Section>
     </div>
   ),
-  args: { children: undefined as unknown as React.ReactNode },
+  args: {
+    children: undefined as unknown as React.ReactNode,
+    size: "lg"
+  },
 };
 
 export const Sizes: Story = {

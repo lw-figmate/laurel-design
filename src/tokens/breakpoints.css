@@ -1,0 +1,17 @@
+/* Laurel Design — Breakpoint Tokens
+ *
+ * These custom properties store breakpoint values for use in JS.
+ * For CSS media queries, use the @custom-media rules or raw values directly,
+ * since CSS custom properties cannot be used inside media query expressions.
+ *
+ * Usage in JS:
+ *   getComputedStyle(document.documentElement).getPropertyValue('--laurel-breakpoint-md')
+ */
+:root {
+  --laurel-breakpoint-xs: 480px;
+  --laurel-breakpoint-sm: 640px;
+  --laurel-breakpoint-md: 768px;
+  --laurel-breakpoint-lg: 1024px;
+  --laurel-breakpoint-xl: 1280px;
+  --laurel-breakpoint-2xl: 1536px;
+}

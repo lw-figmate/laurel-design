@@ -3,7 +3,7 @@ import { Table, TableHeader, TableBody, TableRow, TableHeaderCell, TableCell } f
 import { Pagination } from '../../molecules/Pagination';
 import { SearchField } from '../../molecules/SearchField';
 import { Text } from '../../atoms/Text';
-import type { DataTableProps, DataTableColumn } from './DataTable.types';
+import type { DataTableProps } from './DataTable.types';
 
 function DataTableInner<T>(
   {

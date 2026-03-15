@@ -1,6 +1,6 @@
 import type { ComponentPropsWithoutRef, ReactNode } from 'react';
 
-export interface CommandPaletteProps extends ComponentPropsWithoutRef<'div'> {
+export interface CommandPaletteProps extends Omit<ComponentPropsWithoutRef<'div'>, 'onSelect'> {
   /** Whether the palette is open */
   open: boolean;
   /** Called when the palette should close */

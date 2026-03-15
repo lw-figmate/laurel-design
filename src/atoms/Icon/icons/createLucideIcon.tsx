@@ -2,7 +2,7 @@ import { createElement, forwardRef } from 'react';
 import { Icon } from '../Icon';
 import type { NamedIconProps } from './types';
 
-type IconNode = readonly [tag: string, attrs: Record<string, string>][];
+type IconNode = readonly [tag: string, attrs: Record<string, string | number | undefined>][];
 
 /**
  * Factory that wraps a Lucide icon node array as a React component.

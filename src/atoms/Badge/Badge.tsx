@@ -4,6 +4,8 @@ import type { BadgeProps } from './Badge.types';
 const variantClasses: Record<string, string> = {
   default:
     'bg-[var(--laurel-bg-subtle)] text-[var(--laurel-text-secondary)]',
+  neutral:
+    'bg-[var(--laurel-bg-accent)] text-[var(--laurel-text-primary)]',
   primary:
     'bg-[var(--laurel-bg-brand-subtle)] text-[var(--laurel-text-brand-strong)]',
   success:

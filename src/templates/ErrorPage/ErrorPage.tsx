@@ -1,6 +1,5 @@
 import { forwardRef } from 'react';
 import { Text } from '../../atoms/Text';
-import { Button } from '../../atoms/Button';
 import type { ErrorPageProps } from './ErrorPage.types';
 
 const ErrorPage = forwardRef<HTMLDivElement, ErrorPageProps>(

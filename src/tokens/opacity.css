@@ -1,0 +1,19 @@
+/* Laurel Design — Opacity Scale */
+:root {
+  --laurel-opacity-0: 0;
+  --laurel-opacity-5: 0.05;
+  --laurel-opacity-10: 0.1;
+  --laurel-opacity-15: 0.15;
+  --laurel-opacity-20: 0.2;
+  --laurel-opacity-25: 0.25;
+  --laurel-opacity-30: 0.3;
+  --laurel-opacity-40: 0.4;
+  --laurel-opacity-50: 0.5;
+  --laurel-opacity-60: 0.6;
+  --laurel-opacity-70: 0.7;
+  --laurel-opacity-75: 0.75;
+  --laurel-opacity-80: 0.8;
+  --laurel-opacity-90: 0.9;
+  --laurel-opacity-95: 0.95;
+  --laurel-opacity-100: 1;
+}

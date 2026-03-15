@@ -1,4 +1,4 @@
-import { useState, useRef, useCallback, useEffect, cloneElement } from 'react';
+import { useState, useRef, useCallback, useEffect, cloneElement, type ReactElement } from 'react';
 import type { PopoverProps } from './Popover.types';
 
 const placementClasses: Record<string, string> = {
@@ -48,10 +48,11 @@ const Popover = ({ trigger, children, open: controlledOpen, onOpenChange, placem
     };
   }, [isOpen, setOpen]);
 
-  const triggerElement = cloneElement(trigger, {
+  const triggerEl = trigger as ReactElement<Record<string, unknown>>;
+  const triggerElement = cloneElement(triggerEl, {
     onClick: (e: React.MouseEvent) => {
       handleTriggerClick();
-      trigger.props.onClick?.(e);
+      (triggerEl.props as Record<string, unknown> & { onClick?: (e: React.MouseEvent) => void }).onClick?.(e);
     },
     'aria-expanded': isOpen,
     'aria-haspopup': 'dialog' as const,
