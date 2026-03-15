@@ -8,17 +8,17 @@
 
 :root {
   /* Primary */
-  --laurel-color-primary-50: #f5f0ff;
-  --laurel-color-primary-100: #ede5ff;
-  --laurel-color-primary-200: #dccfff;
-  --laurel-color-primary-300: #c3a8ff;
-  --laurel-color-primary-400: #a876ff;
-  --laurel-color-primary-500: #8f44ff;
-  --laurel-color-primary-600: #7b22f7;
-  --laurel-color-primary-700: #6b14e3;
-  --laurel-color-primary-800: #5a11bf;
-  --laurel-color-primary-900: #4a0f9c;
-  --laurel-color-primary-950: #2e0760;
+  --laurel-color-primary-50: #fffbf0;
+  --laurel-color-primary-100: #fef2d0;
+  --laurel-color-primary-200: #fde29e;
+  --laurel-color-primary-300: #fccc60;
+  --laurel-color-primary-400: #fbb834;
+  --laurel-color-primary-500: #faa41a;
+  --laurel-color-primary-600: #d98808;
+  --laurel-color-primary-700: #b56d06;
+  --laurel-color-primary-800: #93560c;
+  --laurel-color-primary-900: #794612;
+  --laurel-color-primary-950: #452708;
 
   /* Neutral */
   --laurel-color-neutral-0: #ffffff;
@@ -47,18 +47,18 @@
   --laurel-color-success-900: #14532d;
   --laurel-color-success-950: #052e16;
 
-  /* Warning */
-  --laurel-color-warning-50: #fffbeb;
-  --laurel-color-warning-100: #fef3c7;
-  --laurel-color-warning-200: #fde68a;
-  --laurel-color-warning-300: #fcd34d;
-  --laurel-color-warning-400: #fbbf24;
-  --laurel-color-warning-500: #f59e0b;
-  --laurel-color-warning-600: #d97706;
-  --laurel-color-warning-700: #b45309;
-  --laurel-color-warning-800: #92400e;
-  --laurel-color-warning-900: #78350f;
-  --laurel-color-warning-950: #451a03;
+  /* Warning (orange-red, shifted from amber to differentiate from primary) */
+  --laurel-color-warning-50: #fff5f0;
+  --laurel-color-warning-100: #ffe8d6;
+  --laurel-color-warning-200: #ffcfad;
+  --laurel-color-warning-300: #ffab76;
+  --laurel-color-warning-400: #ff8a42;
+  --laurel-color-warning-500: #f06c18;
+  --laurel-color-warning-600: #d4530d;
+  --laurel-color-warning-700: #b0400d;
+  --laurel-color-warning-800: #8e3312;
+  --laurel-color-warning-900: #742d13;
+  --laurel-color-warning-950: #3f1306;
 
   /* Error */
   --laurel-color-error-50: #fef2f2;
