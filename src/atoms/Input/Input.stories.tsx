@@ -16,6 +16,13 @@ const meta = {
   args: {
     placeholder: 'Enter text…',
   },
+  parameters: {
+    docs: {
+      description: {
+        component: 'Single-line text input field. Supports multiple sizes, error state, and all native input types.',
+      },
+    },
+  },
 } satisfies Meta<typeof Input>;
 
 export default meta;

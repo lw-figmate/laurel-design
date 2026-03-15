@@ -21,6 +21,13 @@ const meta = {
   args: {
     children: 'Button',
   },
+  parameters: {
+    docs: {
+      description: {
+        component: 'Interactive element that triggers an action. Available in primary, secondary, ghost, and danger variants across three sizes.',
+      },
+    },
+  },
 } satisfies Meta<typeof Button>;
 
 export default meta;

@@ -83,7 +83,7 @@ const Tab = forwardRef<HTMLButtonElement, TabProps>(
         className={[
           'px-[var(--laurel-space-4)] py-[var(--laurel-space-2)] text-[length:var(--laurel-font-size-sm)] font-[var(--laurel-font-weight-medium)]',
           'border-b-2 -mb-px transition-colors cursor-pointer',
-          'focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[var(--laurel-ring-brand)]',
+          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[var(--laurel-ring-brand)]',
           'disabled:cursor-not-allowed disabled:opacity-50',
           isActive
             ? 'border-[var(--laurel-border-brand)] text-[var(--laurel-text-brand)]'

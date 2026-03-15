@@ -6,6 +6,13 @@ const meta = {
   component: Blockquote,
   tags: ['autodocs'],
   decorators: [(Story) => <div className="max-w-lg"><Story /></div>],
+  parameters: {
+    docs: {
+      description: {
+        component: 'Visually distinct quotation block. Use for cited text, testimonials, or callout passages.',
+      },
+    },
+  },
 } satisfies Meta<typeof Blockquote>;
 
 export default meta;

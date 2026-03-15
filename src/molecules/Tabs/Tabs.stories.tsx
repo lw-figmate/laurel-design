@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import { userEvent, within, expect } from 'storybook/test';
 import { Tabs, TabList, Tab, TabPanel } from './Tabs';
 import { Text } from '../../atoms/Text';
 
@@ -7,12 +8,26 @@ const meta = {
   title: 'Molecules/Tabs',
   component: Tabs,
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: 'Tabbed interface for switching between panels of content. Supports controlled and uncontrolled modes with proper ARIA tab roles.',
+      },
+    },
+  },
 } satisfies Meta<typeof Tabs>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    await userEvent.click(canvas.getByRole('tab', { name: 'Features' }));
+    await expect(canvas.getByText('Features content goes here.')).toBeInTheDocument();
+    await userEvent.click(canvas.getByRole('tab', { name: 'Pricing' }));
+    await expect(canvas.getByText('Pricing content goes here.')).toBeInTheDocument();
+  },
   render: () => (
     <Tabs defaultValue="overview">
       <TabList>

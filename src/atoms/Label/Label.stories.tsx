@@ -13,6 +13,13 @@ const meta = {
     children: 'Email address',
     htmlFor: 'email',
   },
+  parameters: {
+    docs: {
+      description: {
+        component: 'Form label element with an optional required indicator. Associates with form controls via `htmlFor`.',
+      },
+    },
+  },
 } satisfies Meta<typeof Label>;
 
 export default meta;

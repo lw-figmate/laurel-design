@@ -41,7 +41,7 @@ const Pagination = forwardRef<HTMLElement, PaginationProps>(
     );
 
     const btnBase =
-      'inline-flex items-center justify-center h-8 min-w-8 px-[var(--laurel-space-2)] rounded-[var(--laurel-radius-md)] text-[length:var(--laurel-font-size-sm)] transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-[var(--laurel-ring-brand)]';
+      'inline-flex items-center justify-center h-8 min-w-8 px-[var(--laurel-space-2)] rounded-[var(--laurel-radius-md)] text-[length:var(--laurel-font-size-sm)] transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--laurel-ring-brand)]';
 
     return (
       <nav ref={ref} aria-label="Pagination" className={className} {...rest}>

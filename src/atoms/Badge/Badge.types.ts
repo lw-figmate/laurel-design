@@ -5,6 +5,8 @@ export type BadgeVariant = (typeof BADGE_VARIANTS)[number];
 export type BadgeSize = (typeof BADGE_SIZES)[number];
 
 export interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
+  /** Color variant */
   variant?: BadgeVariant;
+  /** Size of the badge */
   size?: BadgeSize;
 }

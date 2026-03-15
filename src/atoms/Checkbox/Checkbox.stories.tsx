@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import { userEvent, within, expect } from 'storybook/test';
 import { Checkbox } from './Checkbox';
 import { CHECKBOX_SIZES } from './Checkbox.types';
 
@@ -11,6 +12,13 @@ const meta = {
     disabled: { control: 'boolean' },
     indeterminate: { control: 'boolean' },
   },
+  parameters: {
+    docs: {
+      description: {
+        component: 'Form control for selecting one or more options. Supports an indeterminate state for "select all" patterns.',
+      },
+    },
+  },
 } satisfies Meta<typeof Checkbox>;
 
 export default meta;
@@ -18,6 +26,13 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: { 'aria-label': 'Accept terms' },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const checkbox = canvas.getByRole('checkbox', { name: 'Accept terms' });
+    await expect(checkbox).not.toBeChecked();
+    await userEvent.click(checkbox);
+    await expect(checkbox).toBeChecked();
+  },
 };
 
 export const Checked: Story = {

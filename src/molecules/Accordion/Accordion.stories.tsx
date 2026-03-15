@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import { userEvent, within, expect } from 'storybook/test';
 import { Accordion, AccordionItem } from './Accordion';
 
 const meta = {
@@ -9,12 +10,28 @@ const meta = {
     multiple: { control: 'boolean' },
   },
   decorators: [(Story) => <div className="max-w-lg"><Story /></div>],
+  parameters: {
+    docs: {
+      description: {
+        component: 'Vertically stacked panels that expand and collapse to reveal content. Supports single or multiple open panels.',
+      },
+    },
+  },
 } satisfies Meta<typeof Accordion>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const firstTrigger = canvas.getByText('What is a design system?');
+    await userEvent.click(firstTrigger);
+    await expect(canvas.getByText('A design system is a collection of reusable components and guidelines.')).toBeInTheDocument();
+    const secondTrigger = canvas.getByText('Why use one?');
+    await userEvent.click(secondTrigger);
+    await expect(canvas.getByText('It ensures consistency across products and speeds up development.')).toBeInTheDocument();
+  },
   render: (args) => (
     <Accordion {...args}>
       <AccordionItem value="1" title="What is a design system?">

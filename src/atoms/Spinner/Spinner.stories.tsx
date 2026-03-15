@@ -10,6 +10,13 @@ const meta = {
     size: { control: 'select', options: SPINNER_SIZES },
     label: { control: 'text' },
   },
+  parameters: {
+    docs: {
+      description: {
+        component: 'Animated loading indicator. Use to signal in-progress operations with an accessible label.',
+      },
+    },
+  },
 } satisfies Meta<typeof Spinner>;
 
 export default meta;

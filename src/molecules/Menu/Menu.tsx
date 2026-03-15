@@ -37,7 +37,7 @@ const MenuItem = forwardRef<HTMLButtonElement, MenuItemProps>(
           'text-[length:var(--laurel-font-size-sm)] text-left',
           'transition-colors cursor-pointer',
           'hover:bg-[var(--laurel-bg-muted)]',
-          'focus:outline-none focus:bg-[var(--laurel-bg-muted)]',
+          'focus-visible:outline-none focus-visible:bg-[var(--laurel-bg-muted)]',
           'disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-transparent',
           className,
         ]

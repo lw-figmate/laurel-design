@@ -18,6 +18,13 @@ const meta = {
     alt: 'Landscape',
     className: 'w-64',
   },
+  parameters: {
+    docs: {
+      description: {
+        component: 'Enhanced img element with built-in object-fit, border-radius, and aspect ratio controls.',
+      },
+    },
+  },
 } satisfies Meta<typeof Image>;
 
 export default meta;

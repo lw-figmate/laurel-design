@@ -31,7 +31,7 @@ const Sheet = forwardRef<HTMLDivElement, SheetProps>(
             'rounded-t-[var(--laurel-radius-xl)]',
             'shadow-lg max-h-[85vh] overflow-y-auto',
             'font-[family-name:var(--laurel-font-sans)]',
-            'animate-[slideUp_0.3s_ease-out]',
+            'animate-[slideUp_var(--laurel-duration-slow)_var(--laurel-ease-out)]',
             className,
           ].filter(Boolean).join(' ')}
           {...rest}

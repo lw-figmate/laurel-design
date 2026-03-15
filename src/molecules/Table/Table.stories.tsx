@@ -9,6 +9,13 @@ const meta = {
     striped: { control: 'boolean' },
   },
   decorators: [(Story) => <div className="max-w-2xl"><Story /></div>],
+  parameters: {
+    docs: {
+      description: {
+        component: 'Data table with sortable headers, striped rows, and row selection. Composed of Table, TableHeader, TableBody, TableRow, and TableCell sub-components.',
+      },
+    },
+  },
 } satisfies Meta<typeof Table>;
 
 export default meta;

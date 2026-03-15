@@ -18,6 +18,13 @@ const meta = {
     placeholder: 'Enter text…',
     rows: 4,
   },
+  parameters: {
+    docs: {
+      description: {
+        component: 'Multi-line text input field. Supports multiple sizes, error state, and configurable resize behavior.',
+      },
+    },
+  },
 } satisfies Meta<typeof Textarea>;
 
 export default meta;

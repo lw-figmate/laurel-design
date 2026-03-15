@@ -5,6 +5,13 @@ const meta = {
   title: 'Atoms/Kbd',
   component: Kbd,
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: 'Renders a keyboard key or shortcut in a styled `<kbd>` element. Use in documentation and shortcut hints.',
+      },
+    },
+  },
 } satisfies Meta<typeof Kbd>;
 
 export default meta;

@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { SettingsForm } from './SettingsForm';
-import { Input } from '../../atoms/Input';
 import { Switch } from '../../atoms/Switch';
 import { FormField } from '../../molecules/FormField';
 
@@ -21,12 +20,8 @@ export const Default: Story = {
         description: 'Update your personal information.',
         content: (
           <div className="space-y-4">
-            <FormField label="Display Name">
-              <Input defaultValue="Jane Doe" />
-            </FormField>
-            <FormField label="Email">
-              <Input type="email" defaultValue="jane@example.com" />
-            </FormField>
+            <FormField label="Display Name" defaultValue="Jane Doe" />
+            <FormField label="Email" type="email" defaultValue="jane@example.com" />
           </div>
         ),
       },

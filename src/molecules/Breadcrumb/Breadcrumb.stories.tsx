@@ -8,6 +8,13 @@ const meta = {
   argTypes: {
     separator: { control: 'text' },
   },
+  parameters: {
+    docs: {
+      description: {
+        component: 'Navigation trail showing the current page location within a hierarchy. Supports custom separators.',
+      },
+    },
+  },
 } satisfies Meta<typeof Breadcrumb>;
 
 export default meta;

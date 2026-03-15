@@ -11,6 +11,13 @@ const meta = {
     showValue: { control: 'boolean' },
   },
   decorators: [(Story) => <div className="max-w-sm"><Story /></div>],
+  parameters: {
+    docs: {
+      description: {
+        component: 'Range input for selecting a numeric value within a min/max range. Supports multiple sizes and an optional value display.',
+      },
+    },
+  },
 } satisfies Meta<typeof Slider>;
 
 export default meta;

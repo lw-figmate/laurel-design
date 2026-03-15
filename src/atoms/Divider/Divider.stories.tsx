@@ -8,6 +8,13 @@ const meta = {
   argTypes: {
     orientation: { control: 'select', options: ['horizontal', 'vertical'] },
   },
+  parameters: {
+    docs: {
+      description: {
+        component: 'Visual separator between content sections. Supports horizontal and vertical orientations.',
+      },
+    },
+  },
 } satisfies Meta<typeof Divider>;
 
 export default meta;

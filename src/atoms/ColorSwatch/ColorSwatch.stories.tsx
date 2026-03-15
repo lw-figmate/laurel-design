@@ -10,6 +10,13 @@ const meta = {
     size: { control: 'select', options: ['sm', 'md', 'lg'] },
     selected: { control: 'boolean' },
   },
+  parameters: {
+    docs: {
+      description: {
+        component: 'Displays a color sample with an optional selection indicator. Use in color pickers and palette displays.',
+      },
+    },
+  },
 } satisfies Meta<typeof ColorSwatch>;
 
 export default meta;

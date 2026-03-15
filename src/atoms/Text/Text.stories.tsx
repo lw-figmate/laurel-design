@@ -16,6 +16,13 @@ const meta = {
   args: {
     children: 'The quick brown fox jumps over the lazy dog.',
   },
+  parameters: {
+    docs: {
+      description: {
+        component: 'Typography primitive for rendering text with consistent font sizes and weights. Renders as any inline or block text element via the `as` prop.',
+      },
+    },
+  },
 } satisfies Meta<typeof Text>;
 
 export default meta;

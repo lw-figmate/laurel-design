@@ -9,6 +9,13 @@ const meta = {
   argTypes: {
     vertical: { control: 'boolean' },
   },
+  parameters: {
+    docs: {
+      description: {
+        component: 'Groups related buttons together with connected borders and spacing. Supports horizontal and vertical orientations.',
+      },
+    },
+  },
 } satisfies Meta<typeof ButtonGroup>;
 
 export default meta;

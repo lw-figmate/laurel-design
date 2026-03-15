@@ -7,8 +7,12 @@ export type TextSize = (typeof TEXT_SIZES)[number];
 export type TextWeight = (typeof TEXT_WEIGHTS)[number];
 
 export interface TextProps extends React.HTMLAttributes<HTMLElement> {
+  /** HTML element to render */
   as?: TextElement;
+  /** Font size */
   size?: TextSize;
+  /** Font weight */
   weight?: TextWeight;
+  /** Truncate text with ellipsis */
   truncate?: boolean;
 }

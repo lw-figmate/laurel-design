@@ -9,6 +9,13 @@ const meta = {
     ratio: { control: 'number' },
   },
   decorators: [(Story) => <div className="max-w-sm"><Story /></div>],
+  parameters: {
+    docs: {
+      description: {
+        component: 'Constrains content to a specified width-to-height ratio. Use for images, videos, and embedded media that must maintain consistent proportions.',
+      },
+    },
+  },
 } satisfies Meta<typeof AspectRatio>;
 
 export default meta;

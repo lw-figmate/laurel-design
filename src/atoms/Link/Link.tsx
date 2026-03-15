@@ -15,7 +15,7 @@ const Link = forwardRef<HTMLAnchorElement, LinkProps>(
         ref={ref}
         className={[
           'font-[family-name:var(--laurel-font-sans)] transition-colors',
-          'focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-[var(--laurel-ring-brand)] rounded-[var(--laurel-radius-sm)]',
+          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 focus-visible:ring-[var(--laurel-ring-brand)] rounded-[var(--laurel-radius-sm)]',
           disabled
             ? 'pointer-events-none opacity-50 cursor-not-allowed'
             : 'cursor-pointer',

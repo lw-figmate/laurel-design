@@ -13,6 +13,13 @@ const meta = {
     noPadding: { control: 'boolean' },
   },
   decorators: [(Story) => <div className="max-w-sm"><Story /></div>],
+  parameters: {
+    docs: {
+      description: {
+        component: 'Flexible container for grouping related content with optional header, body, and footer sections.',
+      },
+    },
+  },
 } satisfies Meta<typeof Card>;
 
 export default meta;

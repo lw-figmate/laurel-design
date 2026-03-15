@@ -14,6 +14,13 @@ const meta = {
   args: {
     children: 'Tag',
   },
+  parameters: {
+    docs: {
+      description: {
+        component: 'Small categorization label for user-generated content like tags and filters.',
+      },
+    },
+  },
 } satisfies Meta<typeof Tag>;
 
 export default meta;

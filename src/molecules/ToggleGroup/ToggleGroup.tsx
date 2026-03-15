@@ -86,7 +86,7 @@ const ToggleGroupItem = forwardRef<HTMLButtonElement, ToggleGroupItemProps>(
         className={[
           'inline-flex items-center justify-center border-r border-[var(--laurel-border-subtle)] last:border-r-0',
           'transition-colors cursor-pointer',
-          'focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[var(--laurel-ring-brand)]',
+          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[var(--laurel-ring-brand)]',
           'disabled:cursor-not-allowed disabled:opacity-50',
           sizeClasses[size],
           isActive

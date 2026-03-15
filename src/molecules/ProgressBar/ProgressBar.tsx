@@ -36,7 +36,7 @@ const ProgressBar = forwardRef<HTMLDivElement, ProgressBarProps>(
           className={['w-full rounded-full bg-[var(--laurel-bg-accent)] overflow-hidden', sizeClasses[size]].join(' ')}
         >
           <div
-            className={['h-full rounded-full transition-[width] duration-300 ease-out', variantClasses[variant]].join(' ')}
+            className={['h-full rounded-full transition-[width] duration-[var(--laurel-duration-slow)] ease-[var(--laurel-ease-out)]', variantClasses[variant]].join(' ')}
             style={{ width: `${pct}%` }}
           />
         </div>

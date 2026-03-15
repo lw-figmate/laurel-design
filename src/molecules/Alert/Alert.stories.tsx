@@ -10,6 +10,13 @@ const meta = {
     title: { control: 'text' },
   },
   decorators: [(Story) => <div className="max-w-lg"><Story /></div>],
+  parameters: {
+    docs: {
+      description: {
+        component: 'Inline notification banner for contextual messages. Available in info, success, warning, and error variants.',
+      },
+    },
+  },
 } satisfies Meta<typeof Alert>;
 
 export default meta;

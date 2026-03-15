@@ -12,6 +12,13 @@ const meta = {
     alt: { control: 'text' },
     initials: { control: 'text' },
   },
+  parameters: {
+    docs: {
+      description: {
+        component: 'Displays a user profile image with an initials fallback. Use in user profiles, comment threads, and contact lists.',
+      },
+    },
+  },
 } satisfies Meta<typeof Avatar>;
 
 export default meta;

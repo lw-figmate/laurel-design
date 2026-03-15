@@ -20,6 +20,13 @@ const meta = {
     placeholder: 'you@example.com',
   },
   decorators: [(Story) => <div className="max-w-sm"><Story /></div>],
+  parameters: {
+    docs: {
+      description: {
+        component: 'Combines Label, Input, helper text, and error message into a complete form field. Handles required indicators and validation display.',
+      },
+    },
+  },
 } satisfies Meta<typeof FormField>;
 
 export default meta;

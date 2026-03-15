@@ -36,7 +36,7 @@ const Carousel = forwardRef<HTMLDivElement, CarouselProps>(
         {...rest}
       >
         <div
-          className="flex transition-transform duration-300 ease-in-out"
+          className="flex transition-transform duration-[var(--laurel-duration-slow)] ease-[var(--laurel-ease-in-out)]"
           style={{ transform: `translateX(-${current * 100}%)` }}
         >
           {slides.map((slide, i) => (

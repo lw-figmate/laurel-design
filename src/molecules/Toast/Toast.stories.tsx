@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import { userEvent, within, expect, fn } from 'storybook/test';
 import { Toast } from './Toast';
 
 const meta = {
@@ -10,6 +11,13 @@ const meta = {
     message: { control: 'text' },
   },
   decorators: [(Story) => <div className="max-w-sm"><Story /></div>],
+  parameters: {
+    docs: {
+      description: {
+        component: 'Notification message with optional dismiss button and action. Use to display feedback after operations complete.',
+      },
+    },
+  },
 } satisfies Meta<typeof Toast>;
 
 export default meta;
@@ -36,5 +44,10 @@ export const WithAction: Story = {
 };
 
 export const Dismissible: Story = {
-  args: { variant: 'info', message: 'New update available.', onDismiss: () => {} },
+  args: { variant: 'info', message: 'New update available.', onDismiss: fn() },
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement);
+    await userEvent.click(canvas.getByRole('button', { name: 'Dismiss' }));
+    await expect(args.onDismiss).toHaveBeenCalled();
+  },
 };

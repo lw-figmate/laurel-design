@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import { userEvent, within, expect, screen } from 'storybook/test';
 import { Dialog } from './Dialog';
 import { Button } from '../../atoms/Button';
 import { Text } from '../../atoms/Text';
@@ -11,12 +12,26 @@ const meta = {
   argTypes: {
     title: { control: 'text' },
   },
+  parameters: {
+    docs: {
+      description: {
+        component: 'Modal overlay that requires user attention. Blocks page interaction until dismissed via overlay click, Escape key, or explicit close.',
+      },
+    },
+  },
 } satisfies Meta<typeof Dialog>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    await userEvent.click(canvas.getByRole('button', { name: 'Open Dialog' }));
+    await expect(screen.getByRole('dialog')).toBeInTheDocument();
+    await userEvent.click(screen.getByRole('button', { name: 'Cancel' }));
+    await expect(screen.queryByRole('dialog')).toBeNull();
+  },
   render: () => {
     const [open, setOpen] = useState(false);
     return (

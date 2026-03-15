@@ -6,6 +6,8 @@ export type ButtonSize = (typeof BUTTON_SIZES)[number];
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  /** Visual style variant */
   variant?: ButtonVariant;
+  /** Size of the button */
   size?: ButtonSize;
 }

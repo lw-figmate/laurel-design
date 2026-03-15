@@ -14,6 +14,13 @@ const meta = {
   args: {
     children: 'Badge',
   },
+  parameters: {
+    docs: {
+      description: {
+        component: 'Small status indicator label. Use to highlight counts, categories, or status information.',
+      },
+    },
+  },
 } satisfies Meta<typeof Badge>;
 
 export default meta;

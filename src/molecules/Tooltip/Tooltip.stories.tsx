@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import { userEvent, within, expect } from 'storybook/test';
 import { Tooltip } from './Tooltip';
 import { Button } from '../../atoms/Button';
 
@@ -9,6 +10,13 @@ const meta = {
   argTypes: {
     placement: { control: 'select', options: ['top', 'bottom', 'left', 'right'] },
     delay: { control: 'number' },
+  },
+  parameters: {
+    docs: {
+      description: {
+        component: 'Hover-triggered floating label for supplementary information. Use on icon buttons, truncated text, and abbreviated content.',
+      },
+    },
   },
 } satisfies Meta<typeof Tooltip>;
 
@@ -36,6 +44,11 @@ export const Bottom: Story = {
 };
 
 export const NoDelay: Story = {
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    await userEvent.hover(canvas.getByRole('button', { name: 'No delay' }));
+    await expect(canvas.getByRole('tooltip')).toBeInTheDocument();
+  },
   render: () => (
     <div className="flex justify-center py-16">
       <Tooltip content="Instant tooltip" delay={0}>

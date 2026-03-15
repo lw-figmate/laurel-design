@@ -12,6 +12,13 @@ const meta = {
     disabled: { control: 'boolean' },
     placeholder: { control: 'text' },
   },
+  parameters: {
+    docs: {
+      description: {
+        component: 'Native dropdown select element with consistent styling. Supports placeholder text, multiple sizes, and error state.',
+      },
+    },
+  },
 } satisfies Meta<typeof Select>;
 
 export default meta;

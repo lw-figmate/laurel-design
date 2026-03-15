@@ -10,6 +10,13 @@ const meta = {
     radioSize: { control: 'select', options: RADIO_SIZES },
     disabled: { control: 'boolean' },
   },
+  parameters: {
+    docs: {
+      description: {
+        component: 'Single-selection form control. Use within a RadioGroup for mutually exclusive option sets.',
+      },
+    },
+  },
 } satisfies Meta<typeof Radio>;
 
 export default meta;

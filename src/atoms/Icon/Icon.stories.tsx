@@ -43,6 +43,13 @@ const meta = {
   args: {
     children: <path d="M10 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16Z" />,
   },
+  parameters: {
+    docs: {
+      description: {
+        component: 'SVG icon wrapper with consistent sizing and accessibility. Renders custom SVG paths within a standardized viewBox.',
+      },
+    },
+  },
 } satisfies Meta<typeof Icon>;
 
 export default meta;

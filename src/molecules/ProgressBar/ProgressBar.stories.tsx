@@ -12,6 +12,13 @@ const meta = {
     showValue: { control: 'boolean' },
   },
   decorators: [(Story) => <div className="max-w-md"><Story /></div>],
+  parameters: {
+    docs: {
+      description: {
+        component: 'Visual indicator of task completion progress. Supports color variants, sizes, and an optional percentage display.',
+      },
+    },
+  },
 } satisfies Meta<typeof ProgressBar>;
 
 export default meta;

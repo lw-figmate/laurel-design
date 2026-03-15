@@ -18,6 +18,13 @@ const meta = {
     onClear: fn(),
   },
   decorators: [(Story) => <div className="max-w-sm"><Story /></div>],
+  parameters: {
+    docs: {
+      description: {
+        component: 'Text input with built-in search icon and clear button. Fires `onSearch` on Enter and `onClear` when the field is cleared.',
+      },
+    },
+  },
 } satisfies Meta<typeof SearchField>;
 
 export default meta;

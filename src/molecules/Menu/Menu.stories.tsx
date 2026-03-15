@@ -7,6 +7,13 @@ const meta = {
   component: Menu,
   tags: ['autodocs'],
   decorators: [(Story) => <div className="max-w-xs"><Story /></div>],
+  parameters: {
+    docs: {
+      description: {
+        component: 'Static list of actionable menu items with proper ARIA roles. Use for navigation lists and action panels.',
+      },
+    },
+  },
 } satisfies Meta<typeof Menu>;
 
 export default meta;

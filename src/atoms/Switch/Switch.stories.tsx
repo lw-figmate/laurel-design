@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import { userEvent, within, expect } from 'storybook/test';
 import { Switch } from './Switch';
 import { SWITCH_SIZES } from './Switch.types';
 
@@ -11,6 +12,13 @@ const meta = {
     disabled: { control: 'boolean' },
     checked: { control: 'boolean' },
   },
+  parameters: {
+    docs: {
+      description: {
+        component: 'Toggle control for binary on/off settings. Renders as a button with `role="switch"` for full accessibility support.',
+      },
+    },
+  },
 } satisfies Meta<typeof Switch>;
 
 export default meta;
@@ -18,6 +26,15 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: { 'aria-label': 'Enable notifications' },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const toggle = canvas.getByRole('switch', { name: 'Enable notifications' });
+    await expect(toggle).toHaveAttribute('aria-checked', 'false');
+    await userEvent.click(toggle);
+    await expect(toggle).toHaveAttribute('aria-checked', 'true');
+    await userEvent.click(toggle);
+    await expect(toggle).toHaveAttribute('aria-checked', 'false');
+  },
 };
 
 export const Checked: Story = {

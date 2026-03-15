@@ -15,6 +15,13 @@ const meta = {
     children: 'Click me',
     href: '#',
   },
+  parameters: {
+    docs: {
+      description: {
+        component: 'Styled anchor element for navigation. Supports external links with automatic `rel` and `target` attributes.',
+      },
+    },
+  },
 } satisfies Meta<typeof Link>;
 
 export default meta;

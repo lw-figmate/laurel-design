@@ -11,6 +11,13 @@ const meta = {
     currentPage: { control: { type: 'number', min: 1 } },
     siblingCount: { control: { type: 'number', min: 0, max: 3 } },
   },
+  parameters: {
+    docs: {
+      description: {
+        component: 'Page navigation controls with prev/next buttons and page number indicators. Configurable sibling count for ellipsis behavior.',
+      },
+    },
+  },
 } satisfies Meta<typeof Pagination>;
 
 export default meta;

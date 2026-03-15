@@ -21,6 +21,13 @@ const meta = {
     size: { control: 'select', options: ICON_SIZES },
     label: { control: 'text' },
   },
+  parameters: {
+    docs: {
+      description: {
+        component: 'Adapts third-party icon libraries (Lucide, simple-icons) to the design system icon API. Normalizes sizing and accessibility attributes.',
+      },
+    },
+  },
 } satisfies Meta<typeof IconAdapter>;
 
 export default meta;

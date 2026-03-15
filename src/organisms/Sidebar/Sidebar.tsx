@@ -22,7 +22,7 @@ const Sidebar = forwardRef<HTMLElement, SidebarProps>(
       className={[
         'flex flex-col h-full',
         'bg-[var(--laurel-bg-surface)] border-r border-[var(--laurel-border-subtle)]',
-        'font-[family-name:var(--laurel-font-sans)] transition-[width] duration-200 overflow-hidden',
+        'font-[family-name:var(--laurel-font-sans)] transition-[width] duration-[var(--laurel-duration-normal)] overflow-hidden',
         className,
       ]
         .filter(Boolean)
