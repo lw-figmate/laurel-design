@@ -7,7 +7,9 @@ import { Badge } from '../atoms/Badge';
 import { Blockquote } from '../atoms/Blockquote';
 import { Button } from '../atoms/Button';
 import { Checkbox } from '../atoms/Checkbox';
+import { Code } from '../atoms/Code';
 import { Divider } from '../atoms/Divider';
+import { Image } from '../atoms/Image';
 import { Input } from '../atoms/Input';
 import { Kbd } from '../atoms/Kbd';
 import { Label } from '../atoms/Label';
@@ -19,6 +21,13 @@ import { Switch } from '../atoms/Switch';
 import { Tag } from '../atoms/Tag';
 import { Text } from '../atoms/Text';
 import { Textarea } from '../atoms/Textarea';
+import { VisuallyHidden } from '../atoms/VisuallyHidden';
+
+import { Alert } from '../molecules/Alert';
+import { Breadcrumb, BreadcrumbItem } from '../molecules/Breadcrumb';
+import { Card, CardHeader, CardBody, CardFooter } from '../molecules/Card';
+import { ProgressBar } from '../molecules/ProgressBar';
+import { Skeleton } from '../molecules/Skeleton';
 
 describe('Atoms — a11y', () => {
   it('Avatar has no violations', async () => {
@@ -146,6 +155,78 @@ describe('Atoms — a11y', () => {
         <Textarea id="bio" />
       </div>,
     );
+    expect(await axe(container)).toHaveNoViolations();
+  });
+
+  it('Code (inline) has no violations', async () => {
+    const { container } = render(<Code>const x = 1;</Code>);
+    expect(await axe(container)).toHaveNoViolations();
+  });
+
+  it('Code (block) has no violations', async () => {
+    const { container } = render(<Code block>{'const x = 1;\nconst y = 2;'}</Code>);
+    expect(await axe(container)).toHaveNoViolations();
+  });
+
+  it('Image has no violations', async () => {
+    const { container } = render(<Image src="test.png" alt="Test image" />);
+    expect(await axe(container)).toHaveNoViolations();
+  });
+
+  it('VisuallyHidden has no violations', async () => {
+    const { container } = render(
+      <button>
+        <VisuallyHidden>Close menu</VisuallyHidden>
+      </button>,
+    );
+    expect(await axe(container)).toHaveNoViolations();
+  });
+});
+
+describe('Molecules — a11y', () => {
+  it('Alert (info) has no violations', async () => {
+    const { container } = render(<Alert variant="info">Information message</Alert>);
+    expect(await axe(container)).toHaveNoViolations();
+  });
+
+  it('Alert (error) has no violations', async () => {
+    const { container } = render(
+      <Alert variant="error" title="Error">Something went wrong.</Alert>,
+    );
+    expect(await axe(container)).toHaveNoViolations();
+  });
+
+  it('Breadcrumb has no violations', async () => {
+    const { container } = render(
+      <Breadcrumb>
+        <BreadcrumbItem href="/">Home</BreadcrumbItem>
+        <BreadcrumbItem href="/docs">Docs</BreadcrumbItem>
+        <BreadcrumbItem active>Current</BreadcrumbItem>
+      </Breadcrumb>,
+    );
+    expect(await axe(container)).toHaveNoViolations();
+  });
+
+  it('Card has no violations', async () => {
+    const { container } = render(
+      <Card>
+        <CardHeader>Title</CardHeader>
+        <CardBody>Content goes here.</CardBody>
+        <CardFooter>
+          <Button>Action</Button>
+        </CardFooter>
+      </Card>,
+    );
+    expect(await axe(container)).toHaveNoViolations();
+  });
+
+  it('ProgressBar has no violations', async () => {
+    const { container } = render(<ProgressBar value={60} label="Upload progress" />);
+    expect(await axe(container)).toHaveNoViolations();
+  });
+
+  it('Skeleton has no violations', async () => {
+    const { container } = render(<Skeleton />);
     expect(await axe(container)).toHaveNoViolations();
   });
 });
