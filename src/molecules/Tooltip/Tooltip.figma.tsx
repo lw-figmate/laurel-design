@@ -1,7 +1,7 @@
 import figma from '@figma/code-connect';
 import { Tooltip } from './Tooltip';
 
-figma.connect(Tooltip, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurelma-DS?node-id=TODO_TOOLTIP', {
+figma.connect(Tooltip, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurelma-DS?node-id=12:901', {
   props: {
     placement: figma.enum('Placement', {
       Top: 'top',

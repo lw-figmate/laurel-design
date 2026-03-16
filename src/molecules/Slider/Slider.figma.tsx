@@ -1,9 +1,9 @@
 import figma from '@figma/code-connect';
 import { Slider } from './Slider';
 
-figma.connect(Slider, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurelma-DS?node-id=TODO_SLIDER', {
+figma.connect(Slider, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurelma-DS?node-id=12:1336', {
   props: {
-    size: figma.enum('Size', { SM: 'sm', MD: 'md', LG: 'lg' }),
+    size: figma.enum('Size', { sm: 'sm', md: 'md', lg: 'lg' }),
     disabled: figma.boolean('Disabled'),
     showValue: figma.boolean('Show Value'),
   },

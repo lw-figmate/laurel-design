@@ -1,7 +1,7 @@
 import figma from '@figma/code-connect';
 import { Tag } from './Tag';
 
-figma.connect(Tag, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurelma-DS?node-id=TODO_TAG', {
+figma.connect(Tag, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurelma-DS?node-id=10:469', {
   props: {
     variant: figma.enum('Variant', {
       Default: 'default',
@@ -11,9 +11,9 @@ figma.connect(Tag, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurelma
       Error: 'error',
     }),
     size: figma.enum('Size', {
-      Small: 'sm',
-      Medium: 'md',
-      Large: 'lg',
+      sm: 'sm',
+      md: 'md',
+      lg: 'lg',
     }),
     children: figma.string('Label'),
   },

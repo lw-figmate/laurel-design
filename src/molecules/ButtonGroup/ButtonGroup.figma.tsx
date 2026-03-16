@@ -2,7 +2,7 @@ import figma from '@figma/code-connect';
 import { ButtonGroup } from './ButtonGroup';
 import { Button } from '../../atoms/Button';
 
-figma.connect(ButtonGroup, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurelma-DS?node-id=TODO_BUTTONGROUP', {
+figma.connect(ButtonGroup, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurelma-DS?node-id=12:1271', {
   props: {
     vertical: figma.boolean('Vertical'),
   },

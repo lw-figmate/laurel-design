@@ -1,22 +1,22 @@
 import figma from '@figma/code-connect';
 import { Text } from './Text';
 
-figma.connect(Text, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurelma-DS?node-id=TODO_TEXT', {
+figma.connect(Text, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurelma-DS?node-id=10:333', {
   props: {
     size: figma.enum('Size', {
-      'Extra Small': 'xs',
-      Small: 'sm',
-      Base: 'base',
-      Large: 'lg',
-      'Extra Large': 'xl',
-      '2XL': '2xl',
-      '3XL': '3xl',
-      '4XL': '4xl',
+      xs: 'xs',
+      sm: 'sm',
+      base: 'base',
+      lg: 'lg',
+      xl: 'xl',
+      '2xl': '2xl',
+      '3xl': '3xl',
+      '4xl': '4xl',
     }),
     weight: figma.enum('Weight', {
       Normal: 'normal',
       Medium: 'medium',
-      Semibold: 'semibold',
+      SemiBold: 'semibold',
       Bold: 'bold',
     }),
     truncate: figma.boolean('Truncate'),

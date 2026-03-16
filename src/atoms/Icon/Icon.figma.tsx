@@ -1,14 +1,14 @@
 import figma from '@figma/code-connect';
 import { Icon } from './Icon';
 
-figma.connect(Icon, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurelma-DS?node-id=TODO_ICON', {
+figma.connect(Icon, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurelma-DS?node-id=10:643', {
   props: {
     size: figma.enum('Size', {
-      'Extra Small': 'xs',
-      Small: 'sm',
-      Medium: 'md',
-      Large: 'lg',
-      'Extra Large': 'xl',
+      xs: 'xs',
+      sm: 'sm',
+      md: 'md',
+      lg: 'lg',
+      xl: 'xl',
     }),
     label: figma.string('Label'),
   },

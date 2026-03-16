@@ -1,18 +1,19 @@
 import figma from '@figma/code-connect';
 import { Button } from './Button';
 
-figma.connect(Button, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurelma-DS?node-id=TODO_BUTTON', {
+figma.connect(Button, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurelma-DS?node-id=10:247', {
   props: {
     variant: figma.enum('Variant', {
       Primary: 'primary',
       Secondary: 'secondary',
+      Outline: 'outline',
       Ghost: 'ghost',
       Danger: 'danger',
     }),
     size: figma.enum('Size', {
-      Small: 'sm',
-      Medium: 'md',
-      Large: 'lg',
+      sm: 'sm',
+      md: 'md',
+      lg: 'lg',
     }),
     disabled: figma.boolean('Disabled'),
     children: figma.string('Label'),

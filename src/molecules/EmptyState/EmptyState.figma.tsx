@@ -1,7 +1,7 @@
 import figma from '@figma/code-connect';
 import { EmptyState } from './EmptyState';
 
-figma.connect(EmptyState, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurelma-DS?node-id=TODO_EMPTYSTATE', {
+figma.connect(EmptyState, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurelma-DS?node-id=12:1545', {
   props: {
     title: figma.string('Title'),
     description: figma.string('Description'),

@@ -1,10 +1,14 @@
 import figma from '@figma/code-connect';
 import { Label } from './Label';
 
-figma.connect(Label, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurelma-DS?node-id=TODO_LABEL', {
+figma.connect(Label, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurelma-DS?node-id=10:341', {
   props: {
-    required: figma.boolean('Required'),
-    disabled: figma.boolean('Disabled'),
+    required: figma.enum('State', {
+      Required: true,
+    }),
+    disabled: figma.enum('State', {
+      Disabled: true,
+    }),
     children: figma.string('Text'),
   },
   example: (props) => <Label {...props} />,

@@ -1,12 +1,12 @@
 import figma from '@figma/code-connect';
 import { Radio } from './Radio';
 
-figma.connect(Radio, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurelma-DS?node-id=TODO_RADIO', {
+figma.connect(Radio, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurelma-DS?node-id=10:561', {
   props: {
     radioSize: figma.enum('Size', {
-      Small: 'sm',
-      Medium: 'md',
-      Large: 'lg',
+      sm: 'sm',
+      md: 'md',
+      lg: 'lg',
     }),
     disabled: figma.boolean('Disabled'),
   },

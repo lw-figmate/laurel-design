@@ -1,19 +1,20 @@
 import figma from '@figma/code-connect';
 import { Badge } from './Badge';
 
-figma.connect(Badge, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurelma-DS?node-id=TODO_BADGE', {
+figma.connect(Badge, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurelma-DS?node-id=10:378', {
   props: {
     variant: figma.enum('Variant', {
       Default: 'default',
+      Neutral: 'neutral',
       Primary: 'primary',
       Success: 'success',
       Warning: 'warning',
       Error: 'error',
     }),
     size: figma.enum('Size', {
-      Small: 'sm',
-      Medium: 'md',
-      Large: 'lg',
+      sm: 'sm',
+      md: 'md',
+      lg: 'lg',
     }),
     children: figma.string('Label'),
   },

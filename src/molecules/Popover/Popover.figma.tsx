@@ -1,7 +1,7 @@
 import figma from '@figma/code-connect';
 import { Popover } from './Popover';
 
-figma.connect(Popover, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurelma-DS?node-id=TODO_POPOVER', {
+figma.connect(Popover, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurelma-DS?node-id=12:1061', {
   props: {
     placement: figma.enum('Placement', {
       Top: 'top',

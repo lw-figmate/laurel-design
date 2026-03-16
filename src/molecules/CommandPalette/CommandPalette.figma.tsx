@@ -1,7 +1,7 @@
 import figma from '@figma/code-connect';
 import { CommandPalette } from './CommandPalette';
 
-figma.connect(CommandPalette, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurelma-DS?node-id=TODO_COMMAND_PALETTE', {
+figma.connect(CommandPalette, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurelma-DS?node-id=13:1753', {
   props: {},
   example: () => (
     <CommandPalette

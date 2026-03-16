@@ -1,10 +1,11 @@
 import figma from '@figma/code-connect';
 import { NotificationBadge } from './NotificationBadge';
 
-figma.connect(NotificationBadge, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurelma-DS?node-id=TODO_NOTIFICATION_BADGE', {
+figma.connect(NotificationBadge, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurelma-DS?node-id=12:933', {
   props: {
-    count: figma.string('Count'),
-    dot: figma.boolean('Dot'),
+    dot: figma.enum('Mode', {
+      Dot: true,
+    }),
     variant: figma.enum('Variant', { Primary: 'primary', Error: 'error' }),
   },
   example: (props) => <NotificationBadge {...props}>{figma.children('*')}</NotificationBadge>,

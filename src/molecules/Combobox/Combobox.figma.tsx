@@ -1,9 +1,9 @@
 import figma from '@figma/code-connect';
 import { Combobox } from './Combobox';
 
-figma.connect(Combobox, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurelma-DS?node-id=TODO_COMBOBOX', {
+figma.connect(Combobox, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurelma-DS?node-id=13:1677', {
   props: {
-    size: figma.enum('Size', { SM: 'sm', MD: 'md', LG: 'lg' }),
+    size: figma.enum('Size', { sm: 'sm', md: 'md', lg: 'lg' }),
     disabled: figma.boolean('Disabled'),
     placeholder: figma.string('Placeholder'),
   },

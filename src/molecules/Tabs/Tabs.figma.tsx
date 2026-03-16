@@ -1,7 +1,7 @@
 import figma from '@figma/code-connect';
 import { Tabs, TabList, Tab, TabPanel } from './Tabs';
 
-figma.connect(Tabs, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurelma-DS?node-id=TODO_TABS', {
+figma.connect(Tabs, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurelma-DS?node-id=12:1019', {
   example: () => (
     <Tabs defaultValue="tab1">
       <TabList>
