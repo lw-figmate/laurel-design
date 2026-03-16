@@ -5,7 +5,7 @@ import { Button } from '../../atoms/Button';
 import type { FeedItem } from './Feed.types';
 
 const items: FeedItem[] = [
-  { id: '1', author: 'Alice', avatarInitials: 'AJ', timestamp: '2h ago', content: <Text as="p" size="sm">Just shipped a new feature! 🚀</Text>, actions: <Button size="sm" variant="ghost">Like</Button> },
+  { id: '1', author: 'Alice', avatarInitials: 'AJ', timestamp: '2h ago', content: <Text as="p" size="sm">Just shipped a new feature!</Text>, actions: <Button size="sm" variant="ghost">Like</Button> },
   { id: '2', author: 'Bob', avatarInitials: 'BS', timestamp: '3h ago', content: <Text as="p" size="sm">Working on the design system. Loving the progress.</Text>, actions: <Button size="sm" variant="ghost">Like</Button> },
   { id: '3', author: 'Carol', avatarInitials: 'CW', timestamp: '5h ago', content: <Text as="p" size="sm">Anyone else excited about the new API?</Text> },
 ];

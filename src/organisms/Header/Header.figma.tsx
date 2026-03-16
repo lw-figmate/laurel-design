@@ -1,7 +1,7 @@
 import figma from '@figma/code-connect';
 import { Header } from './Header';
 
-figma.connect(Header, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurelma-DS?node-id=TODO_HEADER', {
+figma.connect(Header, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurelma-DS?node-id=27:4289', {
   props: {
     sticky: figma.boolean('Sticky'),
   },

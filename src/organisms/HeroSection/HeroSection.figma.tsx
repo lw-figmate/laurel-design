@@ -1,7 +1,7 @@
 import figma from '@figma/code-connect';
 import { HeroSection } from './HeroSection';
 
-figma.connect(HeroSection, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurelma-DS?node-id=TODO_HERO_SECTION', {
+figma.connect(HeroSection, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurelma-DS?node-id=27:4330', {
   props: {
     headline: figma.string('Headline'),
     subtext: figma.string('Subtext'),
