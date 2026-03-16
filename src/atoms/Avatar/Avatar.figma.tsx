@@ -1,17 +1,21 @@
 import figma from '@figma/code-connect';
 import { Avatar } from './Avatar';
 
-figma.connect(Avatar, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurelma-DS?node-id=TODO_AVATAR', {
+figma.connect(Avatar, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurelma-DS?node-id=10:619', {
   props: {
-    src: figma.string('Image URL'),
+    src: figma.enum('Type', {
+      Image: figma.string('Image URL'),
+    }),
     alt: figma.string('Alt Text'),
-    initials: figma.string('Initials'),
+    initials: figma.enum('Type', {
+      Initials: figma.string('Initials'),
+    }),
     size: figma.enum('Size', {
-      'Extra Small': 'xs',
-      Small: 'sm',
-      Medium: 'md',
-      Large: 'lg',
-      'Extra Large': 'xl',
+      xs: 'xs',
+      sm: 'sm',
+      md: 'md',
+      lg: 'lg',
+      xl: 'xl',
     }),
   },
   example: (props) => <Avatar {...props} />,

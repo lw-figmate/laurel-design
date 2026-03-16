@@ -12,6 +12,12 @@
   --laurel-radius-2xl: 1rem;      /* 16px */
   --laurel-radius-full: 9999px;
 
+  /* Border widths */
+  --laurel-border-width-thin: 1px;
+  --laurel-border-width-medium: 1.5px;
+  --laurel-border-width-thick: 2px;
+  --laurel-border-width-heavy: 3px;
+
   /* Shadows */
   --laurel-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --laurel-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
