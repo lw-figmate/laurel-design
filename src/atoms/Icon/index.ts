@@ -4,9 +4,9 @@ export type { IconProps, IconSize } from './Icon.types';
 export { IconAdapter } from './IconAdapter';
 export type { IconAdapterProps } from './IconAdapter.types';
 
-// Built-in icons
+// Built-in icons — one file per icon for 1:1 Figma Code Connect mapping
 export type { NamedIconProps } from './icons';
-export { createLucideIcon } from './icons';
+export { createLucideIcon, createBrandIcon } from './icons';
 export {
   // Navigation
   ArrowUpIcon,
@@ -140,7 +140,6 @@ export {
   AlignRightIcon,
   ListOrderedIcon,
   // Brands
-  createBrandIcon,
   GitHubIcon,
   XTwitterIcon,
   FacebookIcon,

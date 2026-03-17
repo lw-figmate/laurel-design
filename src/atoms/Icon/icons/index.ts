@@ -1,194 +1,148 @@
-// Named icon type
 export type { NamedIconProps } from './types';
-
-// Factories
 export { createLucideIcon } from './createLucideIcon';
+export { createBrandIcon } from './createBrandIcon';
 
-// Navigation
-export {
-  ArrowUpIcon,
-  ArrowDownIcon,
-  ArrowLeftIcon,
-  ArrowRightIcon,
-  ChevronUpIcon,
-  ChevronDownIcon,
-  ChevronLeftIcon,
-  ChevronRightIcon,
-  MoreHorizontalIcon,
-  MoreVerticalIcon,
-  MaximizeIcon,
-  MinimizeIcon,
-} from './navigation';
-
-// Actions
-export {
-  SearchIcon,
-  FilterIcon,
-  SortIcon,
-  EditIcon,
-  TrashIcon,
-  CopyIcon,
-  DownloadIcon,
-  UploadIcon,
-  ShareIcon,
-  PlusIcon,
-  MinusIcon,
-  RefreshIcon,
-  SaveIcon,
-  UndoIcon,
-  RedoIcon,
-  ZoomInIcon,
-  ZoomOutIcon,
-  PrintIcon,
-  ClipboardIcon,
-} from './actions';
-
-// Status
-export {
-  CheckIcon,
-  XIcon,
-  InfoIcon,
-  WarningIcon,
-  AlertCircleIcon,
-  CheckCircleIcon,
-  XCircleIcon,
-  HelpCircleIcon,
-  ShieldCheckIcon,
-  BanIcon,
-  LoaderIcon,
-} from './status';
-
-// Media
-export {
-  PlayIcon,
-  PauseIcon,
-  ImageIcon,
-  CameraIcon,
-  MicrophoneIcon,
-  VideoIcon,
-  VolumeUpIcon,
-  VolumeMuteIcon,
-  SkipForwardIcon,
-  SkipBackIcon,
-  MusicIcon,
-} from './media';
-
-// Social
-export {
-  HeartIcon,
-  StarIcon,
-  BookmarkIcon,
-  BellIcon,
-  ThumbsUpIcon,
-  ThumbsDownIcon,
-  ShareAltIcon,
-} from './social';
-
-// UI
-export {
-  HomeIcon,
-  UserIcon,
-  UsersIcon,
-  SettingsIcon,
-  MenuIcon,
-  CloseIcon,
-  EyeIcon,
-  EyeOffIcon,
-  LockIcon,
-  UnlockIcon,
-  CalendarIcon,
-  MailIcon,
-  ClockIcon,
-  GlobeIcon,
-  LinkIcon,
-  ExternalLinkIcon,
-  CodeIcon,
-  TerminalIcon,
-  DatabaseIcon,
-  WifiIcon,
-  WifiOffIcon,
-  MapPinIcon,
-  LayersIcon,
-  GridIcon,
-  ListIcon,
-  SlidersIcon,
-  HashIcon,
-  ZapIcon,
-  AtSignIcon,
-  PanelLeftIcon,
-} from './ui';
-
-// File
-export {
-  FileIcon,
-  FolderIcon,
-  DocumentIcon,
-  CloudIcon,
-  FolderOpenIcon,
-  ArchiveIcon,
-  HardDriveIcon,
-  CloudUploadIcon,
-  CloudDownloadIcon,
-} from './file';
-
-// Communication
-export {
-  MessageIcon,
-  PhoneIcon,
-  InboxIcon,
-  SendIcon,
-  ReplyIcon,
-  ForwardIcon,
-} from './communication';
-
-// Commerce
-export {
-  ShoppingCartIcon,
-  ShoppingBagIcon,
-  CreditCardIcon,
-  DollarSignIcon,
-  TagIcon,
-  ReceiptIcon,
-  StoreIcon,
-  GiftIcon,
-} from './commerce';
-
-// Editing
-export {
-  BoldIcon,
-  ItalicIcon,
-  UnderlineIcon,
-  StrikethroughIcon,
-  AlignLeftIcon,
-  AlignCenterIcon,
-  AlignRightIcon,
-  ListOrderedIcon,
-} from './editing';
-
-// Brands
-export {
-  createBrandIcon,
-  GitHubIcon,
-  XTwitterIcon,
-  FacebookIcon,
-  InstagramIcon,
-  LinkedInIcon,
-  YouTubeIcon,
-  TikTokIcon,
-  RedditIcon,
-  DiscordIcon,
-  SlackIcon,
-  TwitchIcon,
-  PinterestIcon,
-  SpotifyIcon,
-  AppleIcon,
-  GoogleIcon,
-  MicrosoftIcon,
-  WhatsAppIcon,
-  TelegramIcon,
-  ThreadsIcon,
-  BlueskyIcon,
-  DribbbleIcon,
-  FigmaIcon,
-  SnapchatIcon,
-} from './brands';
+export { ArrowUpIcon } from './ArrowUpIcon';
+export { ArrowDownIcon } from './ArrowDownIcon';
+export { ArrowLeftIcon } from './ArrowLeftIcon';
+export { ArrowRightIcon } from './ArrowRightIcon';
+export { ChevronUpIcon } from './ChevronUpIcon';
+export { ChevronDownIcon } from './ChevronDownIcon';
+export { ChevronLeftIcon } from './ChevronLeftIcon';
+export { ChevronRightIcon } from './ChevronRightIcon';
+export { MoreHorizontalIcon } from './MoreHorizontalIcon';
+export { MoreVerticalIcon } from './MoreVerticalIcon';
+export { MaximizeIcon } from './MaximizeIcon';
+export { MinimizeIcon } from './MinimizeIcon';
+export { SearchIcon } from './SearchIcon';
+export { FilterIcon } from './FilterIcon';
+export { SortIcon } from './SortIcon';
+export { EditIcon } from './EditIcon';
+export { TrashIcon } from './TrashIcon';
+export { CopyIcon } from './CopyIcon';
+export { DownloadIcon } from './DownloadIcon';
+export { UploadIcon } from './UploadIcon';
+export { ShareIcon } from './ShareIcon';
+export { PlusIcon } from './PlusIcon';
+export { MinusIcon } from './MinusIcon';
+export { RefreshIcon } from './RefreshIcon';
+export { SaveIcon } from './SaveIcon';
+export { UndoIcon } from './UndoIcon';
+export { RedoIcon } from './RedoIcon';
+export { ZoomInIcon } from './ZoomInIcon';
+export { ZoomOutIcon } from './ZoomOutIcon';
+export { PrintIcon } from './PrintIcon';
+export { ClipboardIcon } from './ClipboardIcon';
+export { CheckIcon } from './CheckIcon';
+export { XIcon } from './XIcon';
+export { InfoIcon } from './InfoIcon';
+export { WarningIcon } from './WarningIcon';
+export { AlertCircleIcon } from './AlertCircleIcon';
+export { CheckCircleIcon } from './CheckCircleIcon';
+export { XCircleIcon } from './XCircleIcon';
+export { HelpCircleIcon } from './HelpCircleIcon';
+export { ShieldCheckIcon } from './ShieldCheckIcon';
+export { BanIcon } from './BanIcon';
+export { LoaderIcon } from './LoaderIcon';
+export { PlayIcon } from './PlayIcon';
+export { PauseIcon } from './PauseIcon';
+export { ImageIcon } from './ImageIcon';
+export { CameraIcon } from './CameraIcon';
+export { MicrophoneIcon } from './MicrophoneIcon';
+export { VideoIcon } from './VideoIcon';
+export { VolumeUpIcon } from './VolumeUpIcon';
+export { VolumeMuteIcon } from './VolumeMuteIcon';
+export { SkipForwardIcon } from './SkipForwardIcon';
+export { SkipBackIcon } from './SkipBackIcon';
+export { MusicIcon } from './MusicIcon';
+export { HeartIcon } from './HeartIcon';
+export { StarIcon } from './StarIcon';
+export { BookmarkIcon } from './BookmarkIcon';
+export { BellIcon } from './BellIcon';
+export { ThumbsUpIcon } from './ThumbsUpIcon';
+export { ThumbsDownIcon } from './ThumbsDownIcon';
+export { ShareAltIcon } from './ShareAltIcon';
+export { HomeIcon } from './HomeIcon';
+export { UserIcon } from './UserIcon';
+export { UsersIcon } from './UsersIcon';
+export { SettingsIcon } from './SettingsIcon';
+export { MenuIcon } from './MenuIcon';
+export { CloseIcon } from './CloseIcon';
+export { EyeIcon } from './EyeIcon';
+export { EyeOffIcon } from './EyeOffIcon';
+export { LockIcon } from './LockIcon';
+export { UnlockIcon } from './UnlockIcon';
+export { CalendarIcon } from './CalendarIcon';
+export { MailIcon } from './MailIcon';
+export { ClockIcon } from './ClockIcon';
+export { GlobeIcon } from './GlobeIcon';
+export { LinkIcon } from './LinkIcon';
+export { ExternalLinkIcon } from './ExternalLinkIcon';
+export { CodeIcon } from './CodeIcon';
+export { TerminalIcon } from './TerminalIcon';
+export { DatabaseIcon } from './DatabaseIcon';
+export { WifiIcon } from './WifiIcon';
+export { WifiOffIcon } from './WifiOffIcon';
+export { MapPinIcon } from './MapPinIcon';
+export { LayersIcon } from './LayersIcon';
+export { GridIcon } from './GridIcon';
+export { ListIcon } from './ListIcon';
+export { SlidersIcon } from './SlidersIcon';
+export { HashIcon } from './HashIcon';
+export { ZapIcon } from './ZapIcon';
+export { AtSignIcon } from './AtSignIcon';
+export { PanelLeftIcon } from './PanelLeftIcon';
+export { FileIcon } from './FileIcon';
+export { FolderIcon } from './FolderIcon';
+export { DocumentIcon } from './DocumentIcon';
+export { CloudIcon } from './CloudIcon';
+export { FolderOpenIcon } from './FolderOpenIcon';
+export { ArchiveIcon } from './ArchiveIcon';
+export { HardDriveIcon } from './HardDriveIcon';
+export { CloudUploadIcon } from './CloudUploadIcon';
+export { CloudDownloadIcon } from './CloudDownloadIcon';
+export { MessageIcon } from './MessageIcon';
+export { PhoneIcon } from './PhoneIcon';
+export { InboxIcon } from './InboxIcon';
+export { SendIcon } from './SendIcon';
+export { ReplyIcon } from './ReplyIcon';
+export { ForwardIcon } from './ForwardIcon';
+export { ShoppingCartIcon } from './ShoppingCartIcon';
+export { ShoppingBagIcon } from './ShoppingBagIcon';
+export { CreditCardIcon } from './CreditCardIcon';
+export { DollarSignIcon } from './DollarSignIcon';
+export { TagIcon } from './TagIcon';
+export { ReceiptIcon } from './ReceiptIcon';
+export { StoreIcon } from './StoreIcon';
+export { GiftIcon } from './GiftIcon';
+export { BoldIcon } from './BoldIcon';
+export { ItalicIcon } from './ItalicIcon';
+export { UnderlineIcon } from './UnderlineIcon';
+export { StrikethroughIcon } from './StrikethroughIcon';
+export { AlignLeftIcon } from './AlignLeftIcon';
+export { AlignCenterIcon } from './AlignCenterIcon';
+export { AlignRightIcon } from './AlignRightIcon';
+export { ListOrderedIcon } from './ListOrderedIcon';
+export { GitHubIcon } from './GitHubIcon';
+export { XTwitterIcon } from './XTwitterIcon';
+export { FacebookIcon } from './FacebookIcon';
+export { InstagramIcon } from './InstagramIcon';
+export { YouTubeIcon } from './YouTubeIcon';
+export { TikTokIcon } from './TikTokIcon';
+export { RedditIcon } from './RedditIcon';
+export { DiscordIcon } from './DiscordIcon';
+export { TwitchIcon } from './TwitchIcon';
+export { PinterestIcon } from './PinterestIcon';
+export { SpotifyIcon } from './SpotifyIcon';
+export { AppleIcon } from './AppleIcon';
+export { GoogleIcon } from './GoogleIcon';
+export { WhatsAppIcon } from './WhatsAppIcon';
+export { TelegramIcon } from './TelegramIcon';
+export { ThreadsIcon } from './ThreadsIcon';
+export { BlueskyIcon } from './BlueskyIcon';
+export { DribbbleIcon } from './DribbbleIcon';
+export { FigmaIcon } from './FigmaIcon';
+export { SnapchatIcon } from './SnapchatIcon';
+export { LinkedInIcon } from './LinkedInIcon';
+export { SlackIcon } from './SlackIcon';
+export { MicrosoftIcon } from './MicrosoftIcon';
