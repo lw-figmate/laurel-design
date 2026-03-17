@@ -8,8 +8,8 @@ figma.connect(CardGrid, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Lau
   },
   example: ({ columns, gap }) => (
     <CardGrid
-      minCardWidth={columns === '3' ? '280px' : `${Math.floor(960 / Number(columns))}px`}
-      gap={`${gap}px`}
+      minCardWidth="280px"
+      gap={gap}
     >
       {figma.children('Card*')}
     </CardGrid>
