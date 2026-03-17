@@ -7,6 +7,8 @@ figma.connect(NotificationBadge, 'https://www.figma.com/design/Ni2hCq5zflPlamYJf
       Dot: true,
     }),
     variant: figma.enum('Variant', { Primary: 'primary', Error: 'error' }),
+    count: figma.string('Count'),
+    max: figma.string('Max'),
   },
   example: (props) => <NotificationBadge {...props}>{figma.children('*')}</NotificationBadge>,
 });
