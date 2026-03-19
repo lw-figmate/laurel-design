@@ -32,6 +32,9 @@
     "test:e2e": "playwright test",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
+    "tokens:pull": "node scripts/figma-variables/sync.mjs pull",
+    "tokens:push": "node scripts/figma-variables/sync.mjs push",
+    "tokens:diff": "node scripts/figma-variables/sync.mjs diff",
     "prepublishOnly": "npm run build:lib"
   },
   "peerDependencies": {
