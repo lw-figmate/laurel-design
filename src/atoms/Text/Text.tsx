@@ -10,6 +10,7 @@ const sizeClasses: Record<string, string> = {
   '2xl': 'text-[length:var(--laurel-font-size-2xl)] leading-[var(--laurel-line-height-tight)]',
   '3xl': 'text-[length:var(--laurel-font-size-3xl)] leading-[var(--laurel-line-height-tight)]',
   '4xl': 'text-[length:var(--laurel-font-size-4xl)] leading-[var(--laurel-line-height-tight)]',
+  '5xl': 'text-[length:var(--laurel-font-size-5xl)] leading-[var(--laurel-line-height-tight)]',
 };
 
 const weightClasses: Record<string, string> = {
