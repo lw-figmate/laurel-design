@@ -26,3 +26,17 @@ export const Default: Story = {
     ),
   },
 };
+
+export const HiddenScrollbar: Story = {
+  args: {
+    maxHeight: 200,
+    hideScrollbar: true,
+    children: (
+      <div className="space-y-2 p-2">
+        {Array.from({ length: 20 }, (_, i) => (
+          <div key={i} className="p-2 bg-gray-50 rounded text-sm">Item {i + 1}</div>
+        ))}
+      </div>
+    ),
+  },
+};

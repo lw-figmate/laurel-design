@@ -5,10 +5,11 @@ figma.connect(InputGroup, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/L
   props: {
     prefix: figma.string('Prefix'),
     suffix: figma.string('Suffix'),
+    placeholder: figma.string('Placeholder'),
   },
   example: (props) => (
-    <InputGroup {...props}>
-      <input />
+    <InputGroup prefix={props.prefix} suffix={props.suffix}>
+      <input placeholder={props.placeholder} />
     </InputGroup>
   ),
 });

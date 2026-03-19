@@ -11,6 +11,9 @@ figma.connect(Radio, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurel
     disabled: figma.enum('State', {
       Disabled: true,
     }),
+    error: figma.enum('State', {
+      Error: true,
+    }),
   },
   example: (props) => <Radio {...props} />,
 });

@@ -11,6 +11,8 @@ export interface FileUploadProps extends Omit<ComponentPropsWithRef<'div'>, 'onD
   onFilesSelected?: (files: File[]) => void;
   /** Disabled state */
   disabled?: boolean;
+  /** Error state */
+  error?: boolean;
   /** Help text / instructions */
   helpText?: string;
 }

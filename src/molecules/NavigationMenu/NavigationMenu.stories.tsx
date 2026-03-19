@@ -24,3 +24,16 @@ export const Default: Story = {
     </NavigationMenu>
   ),
 };
+
+export const ActiveItem: Story = {
+  render: () => (
+    <NavigationMenu>
+      <NavigationMenuItem trigger="Home" active />
+      <NavigationMenuItem trigger="Products">
+        <NavigationMenuLink href="/widgets">Widgets</NavigationMenuLink>
+        <NavigationMenuLink href="/gadgets">Gadgets</NavigationMenuLink>
+      </NavigationMenuItem>
+      <NavigationMenuItem trigger="About" />
+    </NavigationMenu>
+  ),
+};

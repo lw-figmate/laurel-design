@@ -58,3 +58,13 @@ export const Right: Story = {
     </div>
   ),
 };
+
+export const Left: Story = {
+  render: () => (
+    <div className="flex justify-center py-20">
+      <Popover trigger={<Button>Left</Button>} placement="left">
+        <Text size="sm">Popover on left</Text>
+      </Popover>
+    </div>
+  ),
+};

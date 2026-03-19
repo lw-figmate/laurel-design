@@ -30,6 +30,13 @@ export const FourColumns: Story = {
   },
 };
 
+export const TwoColumns: Story = {
+  args: {
+    ...Default.args,
+    columns: 2,
+  },
+};
+
 export const Empty: Story = {
   args: {
     items: [],

@@ -27,6 +27,7 @@ const Switch = forwardRef<HTMLButtonElement, SwitchProps>(
       onCheckedChange,
       switchSize = 'md',
       disabled,
+      error = false,
       className = '',
       ...rest
     },
@@ -58,7 +59,13 @@ const Switch = forwardRef<HTMLButtonElement, SwitchProps>(
           'transition-colors cursor-pointer',
           'focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-[var(--laurel-ring-brand)]',
           'disabled:cursor-not-allowed disabled:opacity-50',
-          isChecked ? 'bg-[var(--laurel-bg-brand)]' : 'bg-[var(--laurel-bg-control)]',
+          error && !isChecked
+            ? 'bg-[var(--laurel-text-error)]'
+            : error && isChecked
+              ? 'bg-[var(--laurel-bg-brand)] border-[var(--laurel-text-error)]'
+              : isChecked
+                ? 'bg-[var(--laurel-bg-brand)]'
+                : 'bg-[var(--laurel-bg-control)]',
           trackSizes[switchSize],
           className,
         ]

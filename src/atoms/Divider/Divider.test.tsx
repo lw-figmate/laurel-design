@@ -20,12 +20,12 @@ describe('Divider', () => {
 
   it('applies horizontal classes', () => {
     render(<Divider />);
-    expect(screen.getByRole('separator').className).toContain('h-px');
+    expect(screen.getByRole('separator').className).toContain('border-t');
   });
 
   it('applies vertical classes', () => {
     render(<Divider orientation="vertical" />);
-    expect(screen.getByRole('separator').className).toContain('w-px');
+    expect(screen.getByRole('separator').className).toContain('border-l');
   });
 
   it('forwards ref', () => {

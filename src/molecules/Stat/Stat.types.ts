@@ -8,7 +8,7 @@ export interface StatProps extends ComponentPropsWithRef<'div'> {
   /** Optional helper text or delta */
   helpText?: ReactNode;
   /** Trend direction (shows arrow icon) */
-  trend?: 'up' | 'down';
+  trend?: 'up' | 'down' | 'none';
   /** Icon to display */
   icon?: ReactNode;
 }

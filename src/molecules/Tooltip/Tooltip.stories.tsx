@@ -43,6 +43,26 @@ export const Bottom: Story = {
   ),
 };
 
+export const Left: Story = {
+  render: () => (
+    <div className="flex justify-center py-16">
+      <Tooltip content="Left tooltip" placement="left">
+        <Button>Left</Button>
+      </Tooltip>
+    </div>
+  ),
+};
+
+export const Right: Story = {
+  render: () => (
+    <div className="flex justify-center py-16">
+      <Tooltip content="Right tooltip" placement="right">
+        <Button>Right</Button>
+      </Tooltip>
+    </div>
+  ),
+};
+
 export const NoDelay: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);

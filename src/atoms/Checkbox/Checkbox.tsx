@@ -8,7 +8,7 @@ const sizeClasses: Record<string, string> = {
 };
 
 const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
-  ({ checkboxSize = 'md', indeterminate = false, disabled, className = '', ...rest }, ref) => {
+  ({ checkboxSize = 'md', indeterminate = false, disabled, error = false, className = '', ...rest }, ref) => {
     const internalRef = useRef<HTMLInputElement>(null);
     const resolvedRef = (ref as React.RefObject<HTMLInputElement>) ?? internalRef;
 
@@ -25,7 +25,10 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
         disabled={disabled}
         className={[
           sizeClasses[checkboxSize],
-          'rounded-[var(--laurel-radius-sm)] border-[var(--laurel-border-default)]',
+          'rounded-[var(--laurel-radius-sm)]',
+          error
+            ? 'border-[var(--laurel-status-error-text)]'
+            : 'border-[var(--laurel-border-default)]',
           'text-[var(--laurel-text-brand)]',
           'transition-colors cursor-pointer',
           'focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-[var(--laurel-ring-brand)]',

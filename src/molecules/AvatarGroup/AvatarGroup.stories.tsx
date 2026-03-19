@@ -47,3 +47,33 @@ export const Small: Story = {
     </AvatarGroup>
   ),
 };
+
+export const ExtraSmall: Story = {
+  render: () => (
+    <AvatarGroup size="xs">
+      <Avatar initials="AL" />
+      <Avatar initials="BM" />
+      <Avatar initials="CJ" />
+    </AvatarGroup>
+  ),
+};
+
+export const Large: Story = {
+  render: () => (
+    <AvatarGroup size="lg">
+      <Avatar initials="AL" />
+      <Avatar initials="BM" />
+      <Avatar initials="CJ" />
+    </AvatarGroup>
+  ),
+};
+
+export const ExtraLarge: Story = {
+  render: () => (
+    <AvatarGroup size="xl">
+      <Avatar initials="AL" />
+      <Avatar initials="BM" />
+      <Avatar initials="CJ" />
+    </AvatarGroup>
+  ),
+};

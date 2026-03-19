@@ -6,7 +6,7 @@ const meta = {
   component: Stat,
   tags: ['autodocs'],
   argTypes: {
-    trend: { control: 'select', options: [undefined, 'up', 'down'] },
+    trend: { control: 'select', options: [undefined, 'up', 'down', 'none'] },
   },
 } satisfies Meta<typeof Stat>;
 
@@ -23,6 +23,10 @@ export const TrendUp: Story = {
 
 export const TrendDown: Story = {
   args: { label: 'Bounce rate', value: '24.3%', helpText: '-3.1%', trend: 'down' },
+};
+
+export const TrendNone: Story = {
+  args: { label: 'Active users', value: '5,678', helpText: 'No change', trend: 'none' },
 };
 
 export const WithHelpText: Story = {

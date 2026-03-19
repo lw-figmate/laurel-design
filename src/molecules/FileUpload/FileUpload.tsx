@@ -3,7 +3,7 @@ import { Text } from '../../atoms/Text';
 import type { FileUploadProps } from './FileUpload.types';
 
 const FileUpload = forwardRef<HTMLDivElement, FileUploadProps>(
-  ({ accept, multiple = false, maxSize, onFilesSelected, disabled = false, helpText, className = '', ...rest }, ref) => {
+  ({ accept, multiple = false, maxSize, onFilesSelected, disabled = false, error = false, helpText, className = '', ...rest }, ref) => {
     const inputRef = useRef<HTMLInputElement>(null);
     const [isDragging, setIsDragging] = useState(false);
 
@@ -54,9 +54,11 @@ const FileUpload = forwardRef<HTMLDivElement, FileUploadProps>(
           'flex flex-col items-center justify-center gap-[var(--laurel-space-2)] rounded-[var(--laurel-radius-lg)] border-2 border-dashed p-[var(--laurel-space-8)]',
           'font-[family-name:var(--laurel-font-sans)] text-center transition-colors',
           'focus:outline-none focus:ring-2 focus:ring-[var(--laurel-ring-brand)]',
-          isDragging
-            ? 'border-[var(--laurel-border-brand-accent)] bg-[var(--laurel-bg-brand-muted)]'
-            : 'border-[var(--laurel-border-default)] hover:border-[var(--laurel-border-strong)]',
+          error
+            ? 'border-[var(--laurel-status-error-text)]'
+            : isDragging
+              ? 'border-[var(--laurel-border-brand-accent)] bg-[var(--laurel-bg-brand-muted)]'
+              : 'border-[var(--laurel-border-default)] hover:border-[var(--laurel-border-strong)]',
           disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer',
           className,
         ]

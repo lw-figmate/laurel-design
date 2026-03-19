@@ -9,6 +9,7 @@ const meta = {
   argTypes: {
     radioSize: { control: 'select', options: RADIO_SIZES },
     disabled: { control: 'boolean' },
+    error: { control: 'boolean' },
   },
   parameters: {
     docs: {
@@ -32,6 +33,14 @@ export const Checked: Story = {
 
 export const Disabled: Story = {
   args: { 'aria-label': 'Option A', disabled: true },
+};
+
+export const ErrorState: Story = {
+  args: { 'aria-label': 'Option A', error: true },
+};
+
+export const ErrorChecked: Story = {
+  args: { 'aria-label': 'Option A', error: true, defaultChecked: true },
 };
 
 export const Small: Story = {

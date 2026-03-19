@@ -11,6 +11,9 @@ figma.connect(Checkbox, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Lau
     disabled: figma.enum('Disabled', {
       Yes: true,
     }),
+    error: figma.enum('Disabled', {
+      Error: true,
+    }),
     indeterminate: figma.enum('State', {
       Indeterminate: true,
     }),

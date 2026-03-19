@@ -51,3 +51,14 @@ export const AlignEnd: Story = {
     </div>
   ),
 };
+
+export const WithDisabledItem: Story = {
+  render: () => (
+    <DropdownMenu trigger={<Button>Actions</Button>}>
+      <DropdownMenuItem>Edit</DropdownMenuItem>
+      <DropdownMenuItem disabled>Duplicate</DropdownMenuItem>
+      <DropdownMenuSeparator />
+      <DropdownMenuItem disabled>Delete</DropdownMenuItem>
+    </DropdownMenu>
+  ),
+};

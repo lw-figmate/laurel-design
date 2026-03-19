@@ -5,8 +5,7 @@ figma.connect(ListItem, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Lau
   props: {
     primary: figma.string('Primary'),
     secondary: figma.string('Secondary'),
-    interactive: figma.boolean('Interactive'),
-    selected: figma.boolean('Selected'),
+    selected: figma.enum('State', { Selected: true }),
   },
   example: (props) => <ListItem {...props} />,
 });

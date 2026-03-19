@@ -21,7 +21,7 @@ const Stat = forwardRef<HTMLDivElement, StatProps>(
         </Text>
         {helpText && (
           <div className="flex items-center gap-[var(--laurel-space-1)] mt-[var(--laurel-space-1)]">
-            {trend && (
+            {trend && trend !== 'none' && (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"

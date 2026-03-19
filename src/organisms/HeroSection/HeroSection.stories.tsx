@@ -27,6 +27,13 @@ export const LeftAligned: Story = {
   },
 };
 
+export const RightAligned: Story = {
+  args: {
+    ...Default.args,
+    align: 'right',
+  },
+};
+
 export const WithBackgroundImage: Story = {
   args: {
     headline: 'Explore the world',

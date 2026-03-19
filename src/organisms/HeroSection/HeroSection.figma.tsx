@@ -3,11 +3,9 @@ import { HeroSection } from './HeroSection';
 
 figma.connect(HeroSection, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurelma-DS?node-id=27:4330', {
   props: {
-    headline: figma.string('Headline'),
-    subtext: figma.string('Subtext'),
     align: figma.enum('Align', { Left: 'left', Center: 'center', Right: 'right' }),
   },
-  example: ({ headline, subtext, align }) => (
-    <HeroSection headline={headline} subtext={subtext} align={align} />
+  example: ({ align }) => (
+    <HeroSection headline="Headline" subtext="Subtext" align={align} />
   ),
 });

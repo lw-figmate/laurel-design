@@ -11,6 +11,7 @@ const meta = {
     checkboxSize: { control: 'select', options: CHECKBOX_SIZES },
     disabled: { control: 'boolean' },
     indeterminate: { control: 'boolean' },
+    error: { control: 'boolean' },
   },
   parameters: {
     docs: {
@@ -49,6 +50,14 @@ export const Disabled: Story = {
 
 export const DisabledChecked: Story = {
   args: { 'aria-label': 'Accept terms', disabled: true, defaultChecked: true },
+};
+
+export const ErrorState: Story = {
+  args: { 'aria-label': 'Accept terms', error: true },
+};
+
+export const ErrorChecked: Story = {
+  args: { 'aria-label': 'Accept terms', error: true, defaultChecked: true },
 };
 
 export const Small: Story = {

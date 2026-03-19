@@ -8,4 +8,6 @@ export interface CheckboxProps
   checkboxSize?: CheckboxSize;
   /** Show indeterminate state */
   indeterminate?: boolean;
+  /** Show error styling (red border) */
+  error?: boolean;
 }

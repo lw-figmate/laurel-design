@@ -12,6 +12,8 @@ export interface SwitchProps
   onCheckedChange?: (checked: boolean) => void;
   /** Visual size of the switch */
   switchSize?: SwitchSize;
+  /** Show error styling (red track) */
+  error?: boolean;
   /** Accessible label */
   'aria-label'?: string;
 }

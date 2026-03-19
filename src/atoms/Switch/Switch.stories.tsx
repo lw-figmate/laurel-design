@@ -11,6 +11,7 @@ const meta = {
     switchSize: { control: 'select', options: SWITCH_SIZES },
     disabled: { control: 'boolean' },
     checked: { control: 'boolean' },
+    error: { control: 'boolean' },
   },
   parameters: {
     docs: {
@@ -47,6 +48,14 @@ export const Disabled: Story = {
 
 export const DisabledChecked: Story = {
   args: { 'aria-label': 'Enable notifications', disabled: true, checked: true },
+};
+
+export const ErrorState: Story = {
+  args: { 'aria-label': 'Enable notifications', error: true },
+};
+
+export const ErrorChecked: Story = {
+  args: { 'aria-label': 'Enable notifications', error: true, defaultChecked: true },
 };
 
 export const Small: Story = {

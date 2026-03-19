@@ -4,7 +4,7 @@ import { Button } from '../../atoms/Button';
 
 figma.connect(ButtonGroup, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurelma-DS?node-id=12:1271', {
   props: {
-    vertical: figma.boolean('Vertical'),
+    vertical: figma.enum('Direction', { Vertical: true }),
   },
   example: (props) => (
     <ButtonGroup {...props}>

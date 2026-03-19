@@ -11,6 +11,9 @@ figma.connect(Switch, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laure
     disabled: figma.enum('State', {
       Disabled: true,
     }),
+    error: figma.enum('State', {
+      Error: true,
+    }),
     checked: figma.enum('Checked', {
       On: true,
     }),

@@ -3,7 +3,7 @@ import { Header } from './Header';
 
 figma.connect(Header, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurelma-DS?node-id=27:4289', {
   props: {
-    sticky: figma.boolean('Sticky'),
+    sticky: figma.enum('Sticky', { Yes: true }),
   },
   example: (props) => (
     <Header logo={<strong>Logo</strong>} {...props}>

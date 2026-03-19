@@ -44,6 +44,16 @@ export const Small: Story = {
   ),
 };
 
+export const Large: Story = {
+  render: () => (
+    <ToggleGroup size="lg" defaultValue="a">
+      <ToggleGroupItem value="a">A</ToggleGroupItem>
+      <ToggleGroupItem value="b">B</ToggleGroupItem>
+      <ToggleGroupItem value="c">C</ToggleGroupItem>
+    </ToggleGroup>
+  ),
+};
+
 export const WithDisabled: Story = {
   render: () => (
     <ToggleGroup defaultValue="on">

@@ -1,10 +1,8 @@
 import figma from '@figma/code-connect';
 import { DropdownMenu } from './DropdownMenu';
 
-figma.connect(DropdownMenu, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurelma-DS?node-id=12:1311', {
-  props: {
-    align: figma.enum('Align', { Start: 'start', End: 'end' }),
-  },
+figma.connect(DropdownMenu, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurelma-DS?node-id=72:3536', {
+  props: {},
   example: (props) => (
     <DropdownMenu trigger={<button>Open</button>} {...props}>
       {figma.children('DropdownMenuItem*')}

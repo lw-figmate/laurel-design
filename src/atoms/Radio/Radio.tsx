@@ -8,7 +8,7 @@ const sizeClasses: Record<string, string> = {
 };
 
 const Radio = forwardRef<HTMLInputElement, RadioProps>(
-  ({ radioSize = 'md', disabled, className = '', ...rest }, ref) => {
+  ({ radioSize = 'md', disabled, error = false, className = '', ...rest }, ref) => {
     return (
       <input
         ref={ref}
@@ -16,7 +16,9 @@ const Radio = forwardRef<HTMLInputElement, RadioProps>(
         disabled={disabled}
         className={[
           sizeClasses[radioSize],
-          'border-[var(--laurel-border-default)]',
+          error
+            ? 'border-[var(--laurel-status-error-text)]'
+            : 'border-[var(--laurel-border-default)]',
           'text-[var(--laurel-text-brand)]',
           'transition-colors cursor-pointer',
           'focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-[var(--laurel-ring-brand)]',

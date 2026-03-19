@@ -8,6 +8,7 @@ const meta = {
   argTypes: {
     multiple: { control: 'boolean' },
     disabled: { control: 'boolean' },
+    error: { control: 'boolean' },
   },
   decorators: [(Story) => <div className="max-w-md"><Story /></div>],
 } satisfies Meta<typeof FileUpload>;
@@ -33,4 +34,8 @@ export const WithMaxSize: Story = {
 
 export const Disabled: Story = {
   args: { disabled: true, helpText: 'Upload is currently disabled.' },
+};
+
+export const ErrorState: Story = {
+  args: { error: true, helpText: 'Please upload a valid file.' },
 };
