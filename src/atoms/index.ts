@@ -8,19 +8,19 @@ export { Input } from './Input';
 export type { InputProps, InputSize } from './Input';
 
 export { Badge } from './Badge';
-export type { BadgeProps, BadgeVariant, BadgeSize } from './Badge';
+export type { BadgeProps, BadgeVariant, BadgeSize, BadgeStyle } from './Badge';
 
 export { Avatar } from './Avatar';
-export type { AvatarProps, AvatarSize } from './Avatar';
+export type { AvatarProps, AvatarSize, AvatarShape } from './Avatar';
 
 export { Divider } from './Divider';
-export type { DividerProps, DividerOrientation } from './Divider';
+export type { DividerProps, DividerOrientation, DividerVariant } from './Divider';
 
 export { Icon } from './Icon';
 export type { IconProps, IconSize } from './Icon';
 
 export { Label } from './Label';
-export type { LabelProps } from './Label';
+export type { LabelProps, LabelSize } from './Label';
 
 export { Textarea } from './Textarea';
 export type { TextareaProps, TextareaSize } from './Textarea';
@@ -38,7 +38,7 @@ export { Select } from './Select';
 export type { SelectProps, SelectSize } from './Select';
 
 export { Link } from './Link';
-export type { LinkProps, LinkVariant } from './Link';
+export type { LinkProps, LinkVariant, LinkSize } from './Link';
 
 export { Tag } from './Tag';
 export type { TagProps, TagVariant, TagSize } from './Tag';
@@ -50,16 +50,16 @@ export { Image } from './Image';
 export type { ImageProps, ImageFit, ImageRadius } from './Image';
 
 export { Kbd } from './Kbd';
-export type { KbdProps } from './Kbd';
+export type { KbdProps, KbdSize, KbdVariant } from './Kbd';
 
 export { Blockquote } from './Blockquote';
-export type { BlockquoteProps } from './Blockquote';
+export type { BlockquoteProps, BlockquoteSize, BlockquoteAccent } from './Blockquote';
 
 export { AspectRatio } from './AspectRatio';
 export type { AspectRatioProps } from './AspectRatio';
 
 export { ColorSwatch } from './ColorSwatch';
-export type { ColorSwatchProps } from './ColorSwatch';
+export type { ColorSwatchProps, ColorSwatchShape } from './ColorSwatch';
 
 export { Stack } from './Stack';
 export type { StackProps, StackDirection, StackAlign, StackJustify, StackSpacing } from './Stack';

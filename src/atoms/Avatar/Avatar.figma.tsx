@@ -17,6 +17,10 @@ figma.connect(Avatar, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laure
       lg: 'lg',
       xl: 'xl',
     }),
+    shape: figma.enum('Shape', {
+      Circle: 'circle',
+      Square: 'square',
+    }),
   },
   example: (props) => <Avatar {...props} />,
 });

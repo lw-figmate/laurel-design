@@ -7,7 +7,14 @@ figma.connect(Link, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurelm
       Default: 'default',
       Subtle: 'subtle',
     }),
-    disabled: figma.boolean('Disabled'),
+    size: figma.enum('Size', {
+      sm: 'sm',
+      md: 'md',
+      lg: 'lg',
+    }),
+    disabled: figma.enum('Disabled', {
+      Yes: true,
+    }),
     children: figma.string('Text'),
   },
   example: (props) => <Link href="#" {...props} />,

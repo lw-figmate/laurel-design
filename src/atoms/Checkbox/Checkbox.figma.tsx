@@ -8,7 +8,9 @@ figma.connect(Checkbox, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Lau
       md: 'md',
       lg: 'lg',
     }),
-    disabled: figma.boolean('Disabled'),
+    disabled: figma.enum('Disabled', {
+      Yes: true,
+    }),
     indeterminate: figma.enum('State', {
       Indeterminate: true,
     }),

@@ -10,7 +10,6 @@ figma.connect(Icon, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurelm
       lg: 'lg',
       xl: 'xl',
     }),
-    label: figma.string('Label'),
   },
   example: (props) => (
     <Icon {...props}>

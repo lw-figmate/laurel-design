@@ -15,7 +15,9 @@ figma.connect(Button, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laure
       md: 'md',
       lg: 'lg',
     }),
-    disabled: figma.boolean('Disabled'),
+    disabled: figma.enum('State', {
+      Disabled: true,
+    }),
     children: figma.string('Label'),
   },
   example: (props) => <Button {...props} />,

@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Label } from './Label';
+import { LABEL_SIZES } from './Label.types';
 
 const meta = {
   title: 'Atoms/Label',
@@ -8,6 +9,7 @@ const meta = {
   argTypes: {
     required: { control: 'boolean' },
     disabled: { control: 'boolean' },
+    size: { control: 'select', options: LABEL_SIZES },
   },
   args: {
     children: 'Email address',
@@ -37,6 +39,24 @@ export const Disabled: Story = {
 
 export const RequiredAndDisabled: Story = {
   args: { required: true, disabled: true },
+};
+
+export const Small: Story = {
+  args: { size: 'sm' },
+};
+
+export const Large: Story = {
+  args: { size: 'lg' },
+};
+
+export const AllSizes: Story = {
+  render: () => (
+    <div className="flex flex-col gap-[var(--laurel-space-2)]">
+      {LABEL_SIZES.map((s) => (
+        <Label key={s} size={s}>{s} label</Label>
+      ))}
+    </div>
+  ),
 };
 
 export const WithInput: Story = {

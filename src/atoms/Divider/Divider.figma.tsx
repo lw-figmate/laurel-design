@@ -7,6 +7,11 @@ figma.connect(Divider, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laur
       Horizontal: 'horizontal',
       Vertical: 'vertical',
     }),
+    variant: figma.enum('Style', {
+      Solid: 'solid',
+      Dashed: 'dashed',
+      Dotted: 'dotted',
+    }),
   },
   example: (props) => <Divider {...props} />,
 });

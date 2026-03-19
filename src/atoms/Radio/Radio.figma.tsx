@@ -8,7 +8,9 @@ figma.connect(Radio, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurel
       md: 'md',
       lg: 'lg',
     }),
-    disabled: figma.boolean('Disabled'),
+    disabled: figma.enum('State', {
+      Disabled: true,
+    }),
   },
   example: (props) => <Radio {...props} />,
 });

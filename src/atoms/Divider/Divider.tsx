@@ -1,8 +1,14 @@
 import { forwardRef } from 'react';
 import type { DividerProps } from './Divider.types';
 
+const variantClasses: Record<string, string> = {
+  solid: 'border-solid',
+  dashed: 'border-dashed',
+  dotted: 'border-dotted',
+};
+
 const Divider = forwardRef<HTMLHRElement, DividerProps>(
-  ({ orientation = 'horizontal', className = '', ...rest }, ref) => {
+  ({ orientation = 'horizontal', variant = 'solid', className = '', ...rest }, ref) => {
     const isVertical = orientation === 'vertical';
 
     return (
@@ -11,8 +17,9 @@ const Divider = forwardRef<HTMLHRElement, DividerProps>(
         role="separator"
         aria-orientation={orientation}
         className={[
-          'border-none m-0 shrink-0 bg-[var(--laurel-bg-accent)]',
-          isVertical ? 'w-px self-stretch' : 'h-px w-full',
+          'border-0 m-0 shrink-0 border-[var(--laurel-bg-accent)]',
+          variantClasses[variant],
+          isVertical ? 'border-l self-stretch' : 'border-t w-full',
           className,
         ]
           .filter(Boolean)

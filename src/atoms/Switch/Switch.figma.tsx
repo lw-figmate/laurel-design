@@ -8,8 +8,12 @@ figma.connect(Switch, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laure
       md: 'md',
       lg: 'lg',
     }),
-    disabled: figma.boolean('Disabled'),
-    checked: figma.boolean('Checked'),
+    disabled: figma.enum('State', {
+      Disabled: true,
+    }),
+    checked: figma.enum('Checked', {
+      On: true,
+    }),
   },
   example: (props) => <Switch {...props} />,
 });

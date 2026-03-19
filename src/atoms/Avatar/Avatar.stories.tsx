@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Avatar } from './Avatar';
-import { AVATAR_SIZES } from './Avatar.types';
+import { AVATAR_SIZES, AVATAR_SHAPES } from './Avatar.types';
 
 const meta = {
   title: 'Atoms/Avatar',
@@ -8,6 +8,7 @@ const meta = {
   tags: ['autodocs'],
   argTypes: {
     size: { control: 'select', options: AVATAR_SIZES },
+    shape: { control: 'select', options: AVATAR_SHAPES },
     src: { control: 'text' },
     alt: { control: 'text' },
     initials: { control: 'text' },
@@ -66,6 +67,20 @@ export const AllSizesWithImage: Story = {
     <div className="flex items-center gap-[var(--laurel-space-3)]">
       {AVATAR_SIZES.map((s, i) => (
         <Avatar key={s} size={s} src={`https://i.pravatar.cc/150?u=${i}`} alt={`User ${s}`} />
+      ))}
+    </div>
+  ),
+};
+
+export const Square: Story = {
+  args: { initials: 'SQ', shape: 'square' },
+};
+
+export const AllShapes: Story = {
+  render: () => (
+    <div className="flex items-center gap-[var(--laurel-space-3)]">
+      {AVATAR_SHAPES.map((s) => (
+        <Avatar key={s} shape={s} initials={s.slice(0, 2).toUpperCase()} />
       ))}
     </div>
   ),

@@ -16,6 +16,11 @@ figma.connect(Badge, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurel
       md: 'md',
       lg: 'lg',
     }),
+    badgeStyle: figma.enum('Style', {
+      Subtle: 'subtle',
+      Solid: 'solid',
+      Outline: 'outline',
+    }),
     children: figma.string('Label'),
   },
   example: (props) => <Badge {...props} />,

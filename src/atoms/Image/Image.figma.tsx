@@ -9,8 +9,6 @@ figma.connect(Image, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laurel
       lg: 'lg',
       full: 'full',
     }),
-    fit: figma.string('Fit'),
-    aspectRatio: figma.string('Aspect Ratio'),
   },
   example: (props) => <Image src="image.jpg" alt="Description" {...props} />,
 });

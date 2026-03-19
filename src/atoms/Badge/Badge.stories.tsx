@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Badge } from './Badge';
-import { BADGE_VARIANTS, BADGE_SIZES } from './Badge.types';
+import { BADGE_VARIANTS, BADGE_SIZES, BADGE_STYLES } from './Badge.types';
 
 const meta = {
   title: 'Atoms/Badge',
@@ -9,6 +9,7 @@ const meta = {
   argTypes: {
     variant: { control: 'select', options: BADGE_VARIANTS },
     size: { control: 'select', options: BADGE_SIZES },
+    badgeStyle: { control: 'select', options: BADGE_STYLES },
     children: { control: 'text' },
   },
   args: {
@@ -52,6 +53,14 @@ export const Large: Story = {
   args: { size: 'lg', children: 'Published' },
 };
 
+export const Solid: Story = {
+  args: { badgeStyle: 'solid', children: 'Solid' },
+};
+
+export const Outline: Story = {
+  args: { badgeStyle: 'outline', children: 'Outline' },
+};
+
 export const AllVariants: Story = {
   render: () => (
     <div className="flex flex-wrap gap-[var(--laurel-space-3)] items-center">
@@ -67,6 +76,20 @@ export const AllSizes: Story = {
     <div className="flex flex-wrap gap-[var(--laurel-space-3)] items-center">
       {BADGE_SIZES.map((s) => (
         <Badge key={s} size={s}>{s}</Badge>
+      ))}
+    </div>
+  ),
+};
+
+export const AllStyles: Story = {
+  render: () => (
+    <div className="flex flex-col gap-[var(--laurel-space-4)]">
+      {BADGE_STYLES.map((style) => (
+        <div key={style} className="flex flex-wrap gap-[var(--laurel-space-3)] items-center">
+          {BADGE_VARIANTS.map((v) => (
+            <Badge key={`${style}-${v}`} variant={v} badgeStyle={style}>{v}</Badge>
+          ))}
+        </div>
       ))}
     </div>
   ),

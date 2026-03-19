@@ -7,18 +7,27 @@ const sizeClasses: Record<string, string> = {
   lg: 'h-12 w-12',
 };
 
+const shapeClasses: Record<string, string> = {
+  circle: 'rounded-[var(--laurel-radius-full)]',
+  square: 'rounded-[var(--laurel-radius-md)]',
+};
+
 const ColorSwatch = forwardRef<HTMLButtonElement, ColorSwatchProps>(
-  ({ color, size = 'md', selected = false, className = '', style, ...rest }, ref) => (
+  ({ color, size = 'md', selected = false, shape = 'circle', disabled = false, className = '', style, ...rest }, ref) => (
     <button
       ref={ref}
       type="button"
+      disabled={disabled}
       aria-label={color}
       className={[
-        'rounded-[var(--laurel-radius-full)] border-2 transition-shadow cursor-pointer',
+        'border-2 transition-shadow cursor-pointer',
+        shapeClasses[shape],
         sizeClasses[size],
-        selected
-          ? 'border-[var(--laurel-border-brand)] ring-2 ring-[var(--laurel-ring-brand-subtle)]'
-          : 'border-[var(--laurel-border-subtle)] hover:border-[var(--laurel-border-strong)]',
+        disabled
+          ? 'opacity-50 cursor-not-allowed'
+          : selected
+            ? 'border-[var(--laurel-border-brand)] ring-2 ring-[var(--laurel-ring-brand-subtle)]'
+            : 'border-[var(--laurel-border-subtle)] hover:border-[var(--laurel-border-strong)]',
         className,
       ].filter(Boolean).join(' ')}
       style={{ backgroundColor: color, ...style }}

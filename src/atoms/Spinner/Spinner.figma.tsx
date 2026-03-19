@@ -9,6 +9,7 @@ figma.connect(Spinner, 'https://www.figma.com/design/Ni2hCq5zflPlamYJfpIV68/Laur
       lg: 'lg',
       xl: 'xl',
     }),
+    label: figma.string('Label'),
   },
   example: (props) => <Spinner {...props} />,
 });

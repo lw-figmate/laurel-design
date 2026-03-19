@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Link } from './Link';
-import { LINK_VARIANTS } from './Link.types';
+import { LINK_VARIANTS, LINK_SIZES } from './Link.types';
 
 const meta = {
   title: 'Atoms/Link',
@@ -8,6 +8,7 @@ const meta = {
   tags: ['autodocs'],
   argTypes: {
     variant: { control: 'select', options: LINK_VARIANTS },
+    size: { control: 'select', options: LINK_SIZES },
     external: { control: 'boolean' },
     disabled: { control: 'boolean' },
   },
@@ -39,6 +40,24 @@ export const External: Story = {
 
 export const Disabled: Story = {
   args: { disabled: true },
+};
+
+export const Small: Story = {
+  args: { size: 'sm' },
+};
+
+export const Large: Story = {
+  args: { size: 'lg' },
+};
+
+export const AllSizes: Story = {
+  render: () => (
+    <div className="flex gap-[var(--laurel-space-4)] items-center">
+      {LINK_SIZES.map((s) => (
+        <Link key={s} href="#" size={s}>{s}</Link>
+      ))}
+    </div>
+  ),
 };
 
 export const AllVariants: Story = {
