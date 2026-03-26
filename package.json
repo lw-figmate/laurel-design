@@ -1,6 +1,7 @@
 {
-  "name": "laurel-design",
+  "name": "@anthropic/laurel-design",
   "version": "0.1.0",
+  "private": true,
   "type": "module",
   "description": "Laurel Design System — a comprehensive React component library",
   "license": "MIT",
@@ -9,6 +10,7 @@
   "types": "dist/index.d.ts",
   "files": [
     "dist",
+    "guidelines",
     "README.md"
   ],
   "exports": {
@@ -16,7 +18,7 @@
       "import": "./dist/index.js",
       "types": "./dist/index.d.ts"
     },
-    "./styles": "./dist/styles/index.css"
+    "./styles": "./dist/styles/tokens/index.css"
   },
   "sideEffects": [
     "**/*.css"
